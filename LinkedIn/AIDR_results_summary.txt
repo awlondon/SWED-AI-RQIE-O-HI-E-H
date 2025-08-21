@@ -1,0 +1,41 @@
+Total person folders: 11
+Chris-Yabsley: 4 AIDR, 5 original
+David-Braun: 5 AIDR, 6 original
+Jacob-Van-Wingen: 4 AIDR, 5 original
+Justin-Alvey: 4 AIDR, 5 original
+Justin-Singer: 3 AIDR, 5 original
+Lee-Cooper: 5 AIDR, 6 original
+Neal-Manaktola: 3 AIDR, 5 original
+Paul-Stamatiou: 6 AIDR, 9 original
+Roduardo-Villafane: 5 AIDR, 6 original
+Sam-Resnick: 5 AIDR, 6 original
+Sheldon-Nelson: 5 AIDR, 6 original
+Total AIDR images: 49
+Total original images: 64
+Top-level PNGs (non-AIDR): 2
+
+AIDR images by feature:
+  beard: 1
+  ear: 2
+  eyes: 10
+  face: 10
+  glasses: 1
+  hat: 1
+  head: 9
+  mouth: 6
+  nose: 9
+
+AIDR features by person:
+  Chris-Yabsley: ear, eyes, face, nose
+  David-Braun: eyes, face, head, mouth, nose
+  Jacob-Van-Wingen: eyes, face, head, nose
+  Justin-Alvey: eyes, face, head, nose
+  Justin-Singer: eyes, face, head
+  Lee-Cooper: eyes, face, head, mouth, nose
+  Neal-Manaktola: eyes, face, head
+  Paul-Stamatiou: beard, ear, glasses, hat, mouth, nose
+  Roduardo-Villafane: eyes, face, head, mouth, nose
+  Sam-Resnick: eyes, face, head, mouth, nose
+  Sheldon-Nelson: eyes, face, head, mouth, nose
+
+Original-only features: profile-full for most folders and profile-image for Justin-Singer, Neal-Manaktola, and Paul-Stamatiou.
