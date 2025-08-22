@@ -32,8 +32,8 @@ This repository collects open-source intelligence on suspected operations run by
 
 ## Repository Structure
 
-- `LinkedIn/` – data and reports related to LinkedIn persona investigations.
-  - `AIDR_results_summary.txt` – summary of AI detection results for 49 images across 11 accounts.
+ - `LinkedIn/` – data and reports related to LinkedIn persona investigations.
+  - `AIDR_results_summary.json` – structured summary of AI detection results for 49 images across 11 accounts (parsed from `AIDR_results_summary.txt`).
   - `Ankaa_Intel_Report__08.20.25.txt` – background dossier describing MSS integration of AI into surveillance, cyber operations, and influence campaigns.
   - `Sesame/` – image fragments, facial-analysis outputs, and other evidence tied to a set of suspicious LinkedIn personas associated with the company "Sesame".
 - `Intelligence-Analyst/LinkedIn_Infiltration_Research_Plan.md` – 10-hour research plan outlining steps for conducting the investigation.
