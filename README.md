@@ -21,6 +21,7 @@ This repository collects open-source intelligence on suspected operations run by
 
 - `LinkedIn/Ankaa_Intel_Report__08.20.25.txt` – background dossier describing MSS integration of AI into surveillance, cyber operations, and influence campaigns.
 - `LinkedIn/Sesame/` – image fragments, facial-analysis outputs, and other evidence tied to a set of suspicious LinkedIn personas associated with the company "Sesame".
+- `Grok_MSS_AI_Development_Report.md` – summary of a Grok report on MSS strategies for acquiring and applying AI.
 - Additional folders will cover other targets under review, including technology firms such as Auger.
 
 ## Goals
