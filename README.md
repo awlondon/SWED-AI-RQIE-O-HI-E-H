@@ -8,6 +8,13 @@ This repository collects open-source intelligence on suspected operations run by
 - Analyze AI-generated personas, outreach patterns, and supporting infrastructure.
 - Share methods and findings to encourage collaboration across the security community.
 
+## Contents
+
+- [research/](research/) – central hub for analytic notes and methodology. Start here and read `research/README.md` before contributing elsewhere.
+- [case-studies/](case-studies/) – in-depth examinations of individual infiltration campaigns.
+- [shell-companies/](shell-companies/) – information on front or shell entities linked to MSS activities.
+- [datasets/](datasets/) – raw data used in this project. Run the `update.sh` script to fetch the latest files into this directory.
+
 ## Potential Activities
 
 - Catalog suspicious LinkedIn accounts and associated artifacts.
@@ -44,6 +51,8 @@ This repository collects open-source intelligence on suspected operations run by
 ## Usage
 
 All material is provided for research and educational purposes. The data may contain false positives or unverified claims; exercise caution and seek independent confirmation before attribution.
+
+Run the included `update.sh` script to refresh data stored under `datasets/`.
 
 ## Contributing
 
