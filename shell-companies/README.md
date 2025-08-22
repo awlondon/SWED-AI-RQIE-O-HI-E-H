@@ -14,7 +14,6 @@ Vendisys offered similar LinkedIn automation, selling $300 per month packages th
 
 | Company | Location | Offering | Status | Sources |
 | ------- | -------- | -------- | ------ | ------- |
-| LIA | Delhi, India | $300/month AI-generated LinkedIn avatars and fake profiles | Removed by LinkedIn | |
-| Vendisys | San Francisco, USA | $300/month LinkedIn automation and synthetic personas | Removed by LinkedIn | |
-|  |  |  |  |  |
+| LIA | Delhi, India | $300/month AI-generated LinkedIn avatars and fake profiles | Removed by LinkedIn | [lia.co](https://lia.co) |
+| Vendisys | San Francisco, USA | $300/month LinkedIn automation and synthetic personas | Removed by LinkedIn | [vendisys.com](https://vendisys.com) |
 
