@@ -9,6 +9,15 @@ import argparse
 import csv
 from pathlib import Path
 
+# Allowed sector classifications for dataset records
+ALLOWED_SECTORS = {
+    "finance",
+    "technology",
+    "government",
+    "energy",
+    "healthcare",
+}
+
 def append_record(file_path: str, profile_id: str, sector: str, source: str) -> None:
     """Append a record to a dataset CSV file.
 
@@ -23,11 +32,26 @@ def append_record(file_path: str, profile_id: str, sector: str, source: str) -> 
     source : str
         Origin of the record.
     """
+    # Validate inputs
+    if not profile_id.strip() or not sector.strip() or not source.strip():
+        raise ValueError("profile_id, sector, and source must be non-empty")
+    if sector not in ALLOWED_SECTORS:
+        raise ValueError(f"sector must be one of {sorted(ALLOWED_SECTORS)}")
+
+    file_path_obj = Path(file_path)
     fieldnames = ["profile_id", "sector", "source"]
-    file_exists = Path(file_path).exists()
+    existing_ids = set()
+
+    if file_path_obj.exists() and file_path_obj.stat().st_size > 0:
+        with open(file_path, newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            existing_ids = {row["profile_id"] for row in reader}
+    if profile_id in existing_ids:
+        raise ValueError(f"profile_id {profile_id} already exists in {file_path}")
+
     with open(file_path, "a", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
-        if not file_exists or f.tell() == 0:
+        if not file_path_obj.exists() or file_path_obj.stat().st_size == 0:
             writer.writeheader()
         writer.writerow({
             "profile_id": profile_id,
