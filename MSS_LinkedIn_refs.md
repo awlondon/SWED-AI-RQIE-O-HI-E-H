@@ -1,0 +1,8 @@
+1. Ken McCallum, MI5 Director-General, October 2023: "Over 20,000 UK individuals have been approached on LinkedIn by suspected Chinese state actors."
+2. U.S. Department of Justice, "China's Pursuit of Economic Espionage," 2022: "About 80 percent of economic espionage cases brought by the Department involve conduct that benefits the Chinese state."
+3. FBI Director Christopher Wray, Senate testimony, 2020: "We open a new China-related counterintelligence case about every 10 hours."
+4. LinkedIn, "2019 Transparency Report": "Our automated defenses blocked 99.6% of fake accounts, 95% at registration."
+5. FBI congressional testimony, 2023: "The Bureau is handling nearly 5,000 active counterintelligence cases, almost half related to China."
+6. U.S. Department of Justice, Press Release, June 2018: "Mallory was contacted via LinkedIn by a Chinese intelligence officer using the alias Michael Yang."
+7. U.S. Department of Justice, Press Release, November 2021: "Yanjun Xu, a deputy division director of the Jiangsu MSS, was the first Chinese intelligence officer extradited to the United States."
+8. FBI Director Christopher Wray, speech, 2020: "Chinese hackers and intelligence services have stolen more American personal and corporate data than all other nations combined."
