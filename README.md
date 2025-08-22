@@ -2,6 +2,21 @@
 
 This repository collects open-source intelligence on suspected operations run by China's Ministry of State Security (MSS). The investigation focuses on long-term infiltration of professional networks on LinkedIn using fake or stolen identities and AI-generated content.
 
+## Potential Activities
+
+- Catalog suspicious LinkedIn accounts and associated artifacts.
+- Perform image and text analysis to detect synthetic media or stolen credentials.
+- Map relationships between accounts and track outreach behavior over time.
+- Correlate findings with public records and breach data.
+- Share research methods and evidence for peer review.
+
+## Objectives
+
+- Understand how MSS-directed campaigns leverage professional platforms.
+- Identify tactics used to build credibility and manipulate targets.
+- Provide resources for defenders to recognize and counter infiltration.
+- Encourage transparency and information sharing across research communities.
+
 ## Repository Structure
 
 - `LinkedIn/Ankaa_Intel_Report__08.20.25.txt` – background dossier describing MSS integration of AI into surveillance, cyber operations, and influence campaigns.
