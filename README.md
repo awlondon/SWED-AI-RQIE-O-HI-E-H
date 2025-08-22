@@ -1,6 +1,12 @@
 # MSS LinkedIn Infiltration Investigation
 
-This repository collects open-source intelligence on suspected operations run by China's Ministry of State Security (MSS). The investigation focuses on long-term infiltration of professional networks on LinkedIn using fake or stolen identities and AI-generated content.
+This repository collects open-source intelligence on suspected operations run by China's Ministry of State Security (MSS). It documents long-term infiltration of professional networks—particularly LinkedIn—using fake or stolen identities and AI-generated content. The repo serves as a hub for analytic reports, evidence sets, and research plans that help investigators and defenders understand these campaigns.
+
+## Mission
+
+- Preserve and organize evidence of MSS-linked professional network operations.
+- Analyze AI-generated personas, outreach patterns, and supporting infrastructure.
+- Share methods and findings to encourage collaboration across the security community.
 
 ## Potential Activities
 
@@ -19,9 +25,14 @@ This repository collects open-source intelligence on suspected operations run by
 
 ## Repository Structure
 
-- `LinkedIn/Ankaa_Intel_Report__08.20.25.txt` – background dossier describing MSS integration of AI into surveillance, cyber operations, and influence campaigns.
-- `LinkedIn/Sesame/` – image fragments, facial-analysis outputs, and other evidence tied to a set of suspicious LinkedIn personas associated with the company "Sesame".
+- `LinkedIn/` – data and reports related to LinkedIn persona investigations.
+  - `AIDR_results_summary.txt` – summary of AI detection results for 49 images across 11 accounts.
+  - `Ankaa_Intel_Report__08.20.25.txt` – background dossier describing MSS integration of AI into surveillance, cyber operations, and influence campaigns.
+  - `Sesame/` – image fragments, facial-analysis outputs, and other evidence tied to a set of suspicious LinkedIn personas associated with the company "Sesame".
+- `Intelligence-Analyst/LinkedIn_Infiltration_Research_Plan.md` – 10-hour research plan outlining steps for conducting the investigation.
+- `MSS_LinkedIn_Infiltration_Analysis__CLAUDE.md` – comprehensive analysis of MSS LinkedIn operations.
 - `Grok_MSS_AI_Development_Report.md` – summary of a Grok report on MSS strategies for acquiring and applying AI.
+- `MSS_AI_Intelligence_1995-2025.md` – open-source and declassified intelligence on MSS use of AI over three decades.
 - Additional folders will cover other targets under review, including technology firms such as Auger.
 
 ## Goals
