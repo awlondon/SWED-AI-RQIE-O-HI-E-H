@@ -1,4 +1,4 @@
-ANKAA Agent Dossier – Zinn Labs Acquisition by Sesame
+ANKAA Agent REPORT – Zinn Labs Acquisition by Sesame
 1 Overview
 
 Zinn Labs – a Menlo Park‑based start‑up founded by Kevin Boyle (CEO), Robert Konrad, Nitish Padmanaban and Stanford professor Gordon Wetzstein – built event‑based gaze tracking technology for head‑worn devices. Their system uses neuromorphic event cameras coupled with infrared (IR) light sources to capture the pupil’s movement at low latency and low power, enabling discrete, slippage‑resistant eye‑tracking in very small form factors. The technology can estimate 3‑D gaze, determine gaze depth, and even use gaze to select objects for an on‑device search.
