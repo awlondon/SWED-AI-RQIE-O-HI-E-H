@@ -1,2 +1,3 @@
 profile_id,sector,source
 fp001,energy,OSINT
+fp002,technology,internal

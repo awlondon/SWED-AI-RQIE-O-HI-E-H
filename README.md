@@ -32,15 +32,19 @@ This repository collects open-source intelligence on suspected operations run by
 
 ## Repository Structure
 
- - `LinkedIn/` – data and reports related to LinkedIn persona investigations.
-  - `AIDR_results_summary.json` – structured summary of AI detection results for 49 images across 11 accounts (parsed from `AIDR_results_summary.txt`).
-  - `Ankaa_Intel_Report__08.20.25.txt` – background dossier describing MSS integration of AI into surveillance, cyber operations, and influence campaigns.
-  - `Sesame/` – image fragments, facial-analysis outputs, and other evidence tied to a set of suspicious LinkedIn personas associated with the company "Sesame".
-- `Intelligence-Analyst/LinkedIn_Infiltration_Research_Plan.md` – 10-hour research plan outlining steps for conducting the investigation.
-- `MSS_LinkedIn_Infiltration_Analysis__CLAUDE.md` – comprehensive analysis of MSS LinkedIn operations.
-- `Grok_MSS_AI_Development_Report.md` – summary of a Grok report on MSS strategies for acquiring and applying AI.
-- `MSS_AI_Intelligence_1995-2025.md` – open-source and declassified intelligence on MSS use of AI over three decades.
-- Additional folders will cover other targets under review, including technology firms such as Auger.
+- `LinkedIn/` – data and reports related to LinkedIn persona investigations.
+- `datasets/` – structured CSVs on profiles and indictments. Run `python scripts/analyze_datasets.py` to refresh `datasets/analysis_summary.md`.
+- `scripts/` – utilities for updating datasets and generating analytic summaries.
+- Additional folders provide research notes, case studies, and references.
+
+## Full Spectrum Dataset Analysis
+
+The current datasets combine both newly added and pre-existing records:
+
+- Fake profiles: 2 entries spanning the energy and technology sectors.
+- Indictments: 2 entries covering finance and government sectors.
+
+See `datasets/analysis_summary.md` for a detailed breakdown.
 
 ## Goals
 
