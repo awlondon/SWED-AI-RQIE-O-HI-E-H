@@ -1,0 +1,128 @@
+[
+  {
+    "persona": "Chris-Yabsley",
+    "aidr": 4,
+    "original": 5,
+    "features": [
+      "ear",
+      "eyes",
+      "face",
+      "nose"
+    ]
+  },
+  {
+    "persona": "David-Braun",
+    "aidr": 5,
+    "original": 6,
+    "features": [
+      "eyes",
+      "face",
+      "head",
+      "mouth",
+      "nose"
+    ]
+  },
+  {
+    "persona": "Jacob-Van-Wingen",
+    "aidr": 4,
+    "original": 5,
+    "features": [
+      "eyes",
+      "face",
+      "head",
+      "nose"
+    ]
+  },
+  {
+    "persona": "Justin-Alvey",
+    "aidr": 4,
+    "original": 5,
+    "features": [
+      "eyes",
+      "face",
+      "head",
+      "nose"
+    ]
+  },
+  {
+    "persona": "Justin-Singer",
+    "aidr": 3,
+    "original": 5,
+    "features": [
+      "eyes",
+      "face",
+      "head"
+    ]
+  },
+  {
+    "persona": "Lee-Cooper",
+    "aidr": 5,
+    "original": 6,
+    "features": [
+      "eyes",
+      "face",
+      "head",
+      "mouth",
+      "nose"
+    ]
+  },
+  {
+    "persona": "Neal-Manaktola",
+    "aidr": 3,
+    "original": 5,
+    "features": [
+      "eyes",
+      "face",
+      "head"
+    ]
+  },
+  {
+    "persona": "Paul-Stamatiou",
+    "aidr": 6,
+    "original": 9,
+    "features": [
+      "beard",
+      "ear",
+      "glasses",
+      "hat",
+      "mouth",
+      "nose"
+    ]
+  },
+  {
+    "persona": "Roduardo-Villafane",
+    "aidr": 5,
+    "original": 6,
+    "features": [
+      "eyes",
+      "face",
+      "head",
+      "mouth",
+      "nose"
+    ]
+  },
+  {
+    "persona": "Sam-Resnick",
+    "aidr": 5,
+    "original": 6,
+    "features": [
+      "eyes",
+      "face",
+      "head",
+      "mouth",
+      "nose"
+    ]
+  },
+  {
+    "persona": "Sheldon-Nelson",
+    "aidr": 5,
+    "original": 6,
+    "features": [
+      "eyes",
+      "face",
+      "head",
+      "mouth",
+      "nose"
+    ]
+  }
+]

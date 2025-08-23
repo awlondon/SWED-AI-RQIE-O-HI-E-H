@@ -20,6 +20,29 @@ Based on the internal AIDR summary file, there are 49 images flagged by the AI-i
 
 *Probabilities are approximate judgments derived from the proportion of AIDR-flagged images and the types of features flagged; they are not definitive labels.
 
+
+### Probability derivation and limitations
+
+The probability column applies a simple heuristic based on two factors:
+
+1. **Flagged-image ratio** – the share of images marked by AIDR for each persona.
+2. **Feature weighting** – a +5% adjustment for each distinct core facial feature flagged (eyes, nose, mouth, head/face); accessories such as glasses or hats contribute at most +2%.
+
+The estimate is calculated as:
+
+`p ≈ (flagged images ÷ total images) × 100% + feature adjustment`
+
+Rounded to the nearest five percent, results are mapped to qualitative labels (e.g., “Medium”, “Medium-high”).
+
+**Assumptions and limitations**
+
+- Each image and feature is treated as an independent indicator, though correlations are possible.
+- Weightings are analyst judgment, not statistically validated; they do not reflect AIDR confidence scores.
+- Sample sizes are small, and AIDR’s false-positive/false-negative rates are not quantified here.
+- Manual review and ground-truth images are required for high confidence.
+
+Further background on methodology and detection reliability appears in the [LinkedIn Infiltration Research Plan](../../Intelligence-Analyst/LinkedIn_Infiltration_Research_Plan.md) and broader context in the [MSS LinkedIn Infiltration Analysis](../../MSS_LinkedIn_Infiltration_Analysis__CLAUDE.md) with supporting references in [MSS_LinkedIn_refs.md](../../MSS_LinkedIn_refs.md).
+
 ### Interpretation
 
 The AI-image-recognition system flagged facial features—eyes, nose, head shape, and mouths—most often. Academic and practitioner articles on AI-generated images explain that these areas frequently contain artifacts: generative models may mis-place eyes or noses, produce mismatched ears, or create overly smooth and shiny skin. Accessories such as hats, glasses or jewelry may also appear distorted. Thus, individuals with multiple facial features flagged and a high proportion of suspect images (e.g., David-Braun, Lee-Cooper, Roduardo-Villafane, Sam-Resnick, and Sheldon-Nelson) were assessed with a medium-high probability of being AI-generated profiles.
