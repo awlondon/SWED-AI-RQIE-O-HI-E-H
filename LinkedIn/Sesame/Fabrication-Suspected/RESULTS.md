@@ -1,22 +1,33 @@
 # Sesame AIDR Image Analysis Results
 
-Based on the internal AIDR summary file, there are 49 images flagged by the AI-image-recognition system (“AIDR images”) and 64 original images across 11 LinkedIn personas. The AIDR report lists which features triggered the AI detection (ears, eyes, nose, etc.) for each persona. Research on how to spot AI-generated photos notes that generative models often mis-place facial features, producing odd eyes, noses or ears; they may also struggle with accessories like hats or glasses and generate oversaturated skin or “waxy” faces. Experts caution, however, that individual anomalies can occur naturally—people may genuinely have unusual features or extra fingers—so false positives are possible.
+Based on the internal AIDR summary file, there are 97 images flagged by the AI-image-recognition system (“AIDR images”) and 127 original images across 22 LinkedIn personas. The summary below was last updated on 2025-08-23 19:06 UTC. The AIDR report lists which features triggered the AI detection (ears, eyes, nose, etc.) for each persona. Research on how to spot AI-generated photos notes that generative models often mis-place facial features, producing odd eyes, noses or ears; they may also struggle with accessories like hats or glasses and generate oversaturated skin or “waxy” faces. Experts caution, however, that individual anomalies can occur naturally—people may genuinely have unusual features or extra fingers—so false positives are possible.
 
 ### AIDR AI-detection results by person
 
-| Persona                | AIDR images / total images | Features flagged by AI                | Approx. probability of AI-generated profile*                                                                                              |
-| ---------------------- | -------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Chris-Yabsley**      | 4 / 9 (44 %)               | ear, eyes, face, nose                 | **Medium (~60 %)** – multiple facial features flagged and four of nine images are suspect, suggesting possible AI artifacts.              |
-| **David-Braun**        | 5 / 11 (45 %)              | eyes, face, head, mouth, nose         | **Medium-high (~65 %)** – eyes, head shape and nose are common AI trouble-spots, and nearly half of images are flagged.                   |
-| **Jacob-Van-Wingen**   | 4 / 9 (44 %)               | eyes, face, head, nose                | **Medium (~60 %)** – similar pattern of facial-feature anomalies.                                                                         |
-| **Justin-Alvey**       | 4 / 9 (44 %)               | eyes, face, head, nose                | **Medium (~60 %)** – ratio and features mirror Jacob-Van-Wingen.                                                                          |
-| **Justin-Singer**      | 3 / 8 (38 %)               | eyes, face, head                      | **Medium (~55 %)** – fewer images flagged; no nose or mouth anomalies.                                                                    |
-| **Lee-Cooper**         | 5 / 11 (45 %)              | eyes, face, head, mouth, nose         | **Medium-high (~65 %)** – multiple key facial features flagged.                                                                           |
-| **Neal-Manaktola**     | 3 / 8 (38 %)               | eyes, face, head                      | **Medium (~55 %)** – ratio is lower; flagged features limited to eyes/face/head.                                                          |
-| **Paul-Stamatiou**     | 6 / 15 (40 %)              | beard, ear, glasses, hat, mouth, nose | **Medium (~60 %)** – ratio moderate; some flags (glasses, hat, beard) could be accessories, but nose and mouth anomalies raise suspicion. |
-| **Roduardo-Villafane** | 5 / 11 (45 %)              | eyes, face, head, mouth, nose         | **Medium-high (~65 %)** – multiple facial features flagged.                                                                               |
-| **Sam-Resnick**        | 5 / 11 (45 %)              | eyes, face, head, mouth, nose         | **Medium-high (~65 %)** – similar to Roduardo.                                                                                            |
-| **Sheldon-Nelson**     | 5 / 11 (45 %)              | eyes, face, head, mouth, nose         | **Medium-high (~65 %)** – similar to Roduardo and Sam.                                                                                    |
+| Persona | AIDR images / total images | Features flagged by AI | Approx. probability of AI-generated profile* |
+| --- | --- | --- | --- |
+| **Alia-De-Jesus** | 4 / 9 (44 %) | eyes, face, mouth, nose | **Medium-high (~65%)** |
+| **Angela-Gayles** | 5 / 11 (45 %) | eyes, face, head, mouth, nose | **Medium-high (~65%)** |
+| **Ben-Rodrian** | 6 / 13 (46 %) | chin, eyes, face, hat, mouth, nose | **High (~70%)** |
+| **Chris-Ronne** | 4 / 9 (44 %) | eyes, mouth, nose, profile_face | **Medium-high (~60%)** |
+| **Chris-Yabsley** | 4 / 9 (44 %) | ear, eyes, face, nose | **Medium-high (~60%)** |
+| **David-Braun** | 5 / 11 (45 %) | eyes, face, head, mouth, nose | **Medium-high (~65%)** |
+| **Han-Roh** | 5 / 11 (45 %) | eyes, face, head, mouth, nose | **Medium-high (~65%)** |
+| **Jacob-Van-Wingen** | 4 / 9 (44 %) | eyes, face, head, nose | **Medium-high (~60%)** |
+| **Justin-Alvey** | 4 / 9 (44 %) | eyes, face, head, nose | **Medium-high (~60%)** |
+| **Justin-Singer** | 3 / 8 (38 %) | eyes, face, head | **Medium (~50%)** |
+| **Lee-Cooper** | 5 / 11 (45 %) | eyes, face, head, mouth, nose | **Medium-high (~65%)** |
+| **Mark-Bu** | 3 / 7 (43 %) | eyes, hand_drink_glass, head | **Medium (~55%)** |
+| **Natalie-Dunnege** | 2 / 6 (33 %) | eyes, mouth | **Low (~45%)** |
+| **Neal-Manaktola** | 3 / 8 (38 %) | eyes, face, head | **Medium (~50%)** |
+| **Paul-Stamatiou** | 6 / 16 (38 %) | beard, ear, glasses, hat, mouth, nose | **Medium (~55%)** |
+| **Roduardo-Villafane** | 5 / 11 (45 %) | eyes, face, head, mouth, nose | **Medium-high (~65%)** |
+| **Ryan-Brown** | 5 / 12 (42 %) | chin, eyes, face, head, mouth | **Medium-high (~60%)** |
+| **Sam-Resnick** | 5 / 11 (45 %) | eyes, face, head, mouth, nose | **Medium-high (~65%)** |
+| **Sean-McBeath** | 6 / 13 (46 %) | chin, eyes, face, head, mouth, nose | **High (~70%)** |
+| **Sheldon-Nelson** | 5 / 11 (45 %) | eyes, face, head, mouth, nose | **Medium-high (~65%)** |
+| **Xiao-Qin** | 4 / 9 (44 %) | glasses, head, mouth, nose | **Medium-high (~60%)** |
+| **Zach-Little** | 4 / 10 (40 %) | eyes, face, mouth, nose | **Medium-high (~60%)** |
 
 *Probabilities are approximate judgments derived from the proportion of AIDR-flagged images and the types of features flagged; they are not definitive labels.
 
