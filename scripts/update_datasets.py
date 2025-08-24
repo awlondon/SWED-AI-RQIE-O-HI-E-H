@@ -205,8 +205,9 @@ def append_record(
     logger.info("Appended record for %s to %s", profile_id, file_path)
 
 
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
+def main() -> None:
+    """Command-line interface for updating datasets."""
+
     parser = argparse.ArgumentParser(
         description="Append a record to a dataset CSV.",
     )
@@ -258,26 +259,7 @@ if __name__ == "__main__":
             f"Appended partnership for {args.institution}-{args.partner} to {args.file_path}"
         )
 
-    try:
-        if args.command == "profile":
-            append_record(args.file_path, args.profile_id, args.sector, args.source)
-            logger.info(
-                "Appended record for %s to %s", args.profile_id, args.file_path
-            )
-        else:
-            append_partnership(
-                args.file_path,
-                args.institution,
-                args.partner,
-                args.partnership_type,
-                args.source,
-            )
-            logger.info(
-                "Appended partnership for %s-%s to %s",
-                args.institution,
-                args.partner,
-                args.file_path,
-            )
-    except Exception:
-        logger.exception("Failed to update dataset")
-        raise
+
+if __name__ == "__main__":
+    main()
+

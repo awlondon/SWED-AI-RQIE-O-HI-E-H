@@ -51,7 +51,10 @@ pytest
 1. Append records with the `update-datasets` console script:
 
    ```bash
-   update-datasets profile datasets/fake_profiles.csv P123 finance osint
+   pip install -e .
+   # or
+   pip install -r requirements.txt
+
    ```
 
 2. Regenerate `datasets/analysis_summary.md` with `analyze-datasets`:
