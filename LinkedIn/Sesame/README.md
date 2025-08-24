@@ -1,10 +1,9 @@
 # Sesame Persona Investigation
 
-This folder consolidates evidence on LinkedIn accounts linked to the company "Sesame" and suspected of using fabricated or stolen identities. For broader context on the overall investigation, consult the parent [LinkedIn README](../README.md).
-See [LinkedIn Infiltration Research Plan](../../Intelligence-Analyst/LinkedIn_Infiltration_Research_Plan.md) for methodology.
+This folder consolidates evidence on LinkedIn accounts linked to the company "Sesame" and suspected of using fabricated or stolen identities. For broader context on the investigation, consult the parent [LinkedIn README](../README.md) and the [LinkedIn Infiltration Research Plan](../../Intelligence-Analyst/LinkedIn_Infiltration_Research_Plan.md) for methodology.
 
 ## Key Items
-- `LinkedIn_HelpAssistant_Chat.pdf` and `LinkedIn_HelpAssistant_Chat_1.png`–`LinkedIn_HelpAssistant_Chat_7.png` – screenshots of a support conversation documenting attempts to flag the accounts.
+- [`LinkedIn_HelpAssistant_Report.md`](LinkedIn_HelpAssistant_Report.md) – analysis of the support conversation documented in `LinkedIn_HelpAssistant_Chat.pdf` and screenshots (`LinkedIn_HelpAssistant_Chat_1.png`–`LinkedIn_HelpAssistant_Chat_7.png`).
 - [`Fabrication-Suspected`](Fabrication-Suspected/) – profiles believed to be AI-generated, with image-analysis artifacts.
 - [`Identity-Theft-Suspected`](Identity-Theft-Suspected/) – personas (e.g., Brendan Iribe, Gordon Wetzstein, Nate Mitchell) that appear to reuse real individuals' images without consent.
 - `Zinn-Labs (acquisition)/` – open-source material on Sesame's reported acquisition of Zinn Labs.
@@ -25,3 +24,7 @@ Current findings indicate no U.S. export ban on Zinn Labs' eye-tracking technolo
 - [Sesame](../../institutions/sesame/README.md) – corporate background and linked personas.
 - [Zinn Labs](../../institutions/zinn-labs/README.md) – acquisition details and technology considerations.
 - [Stanford University](../../institutions/stanford/README.md) – affiliation of professor Gordon Wetzstein, cited in identity-theft leads.
+
+## Additional Reports
+- [Ankaa Intelligence Report](../Ankaa_Intel_Report__08.20.25.md) – background on MSS adoption of AI and its implications for LinkedIn campaigns.
+- [MSS LinkedIn Infiltration Analysis](../../MSS_LinkedIn_Infiltration_Analysis__CLAUDE.md) – broader study of state-linked exploitation tactics on the platform.
