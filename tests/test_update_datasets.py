@@ -114,3 +114,28 @@ def test_append_partnership_empty_fields(
     csv_file = tmp_path / "mcf.csv"
     with pytest.raises(ValueError):
         append_partnership(csv_file, institution, partner, partnership_type, source)
+
+
+def test_append_record_creates_file_when_missing(tmp_path):
+    csv_file = tmp_path / "data.csv"
+    append_record(csv_file, "P1", "finance", "src")
+    assert csv_file.exists()
+    with open(csv_file, newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    assert rows == [{"profile_id": "P1", "sector": "finance", "source": "src"}]
+
+
+def test_append_record_malformed_header(tmp_path):
+    csv_file = tmp_path / "data.csv"
+    csv_file.write_text("profile,sector,source\nP1,finance,src\n", encoding="utf-8")
+    with pytest.raises(KeyError):
+        append_record(csv_file, "P1", "finance", "src")
+
+
+def test_append_partnership_case_sensitive_duplicate(tmp_path):
+    csv_file = tmp_path / "mcf.csv"
+    append_partnership(csv_file, "InstA", "Partner1", "research", "osint")
+    append_partnership(csv_file, "insta", "partner1", "research", "osint")
+    with open(csv_file, newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    assert len(rows) == 2
