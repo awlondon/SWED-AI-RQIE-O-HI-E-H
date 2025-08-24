@@ -34,3 +34,23 @@ def test_append_record_duplicate_profile_id(tmp_path):
     assert rows == [
         {"profile_id": "P123", "sector": "finance", "source": "osint"}
     ]
+
+
+def test_append_record_invalid_sector(tmp_path):
+    csv_file = tmp_path / "data.csv"
+    with pytest.raises(ValueError):
+        append_record(csv_file, "P123", "invalid", "osint")
+
+
+@pytest.mark.parametrize(
+    "profile_id, sector, source",
+    [
+        ("", "finance", "osint"),
+        ("P123", "", "osint"),
+        ("P123", "finance", ""),
+    ],
+)
+def test_append_record_empty_fields(tmp_path, profile_id, sector, source):
+    csv_file = tmp_path / "data.csv"
+    with pytest.raises(ValueError):
+        append_record(csv_file, profile_id, sector, source)
