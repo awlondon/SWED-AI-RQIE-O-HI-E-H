@@ -15,6 +15,11 @@ New persona clusters should be added as subdirectories containing raw exports, s
 - [Yanjun Xu](../case-studies/yanjun-xu/README.md) – leveraged talent-recruitment programs and front companies to solicit aviation experts.
 - [Chen Lai](../case-studies/chen-lai/notes.md) – ongoing research into recruitment methods and operational timeline.
 
+## Related Institutions
+- [Tsinghua University](../institutions/tsinghua-university/README.md) – recurring affiliation in fabricated LinkedIn profiles.
+- [UCLA](../institutions/ucla/README.md) – prominent U.S. institution cited in suspicious resumes.
+- [USC](../institutions/usc/README.md) – another common reference point in suspect educational histories.
+
 ## Future Work
 - Map relationships between clusters and underlying infrastructure.
 - Track account takedowns and resurrected identities.

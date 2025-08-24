@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """Generate summary statistics for dataset CSV files.
 
-Reads all CSV files in the ``datasets`` directory and writes a
-summary of record counts by sector to ``datasets/analysis_summary.md``.
+Reads all CSV files in the ``datasets`` directory and writes a summary of
+record counts to ``datasets/analysis_summary.md``. For datasets containing a
+``sector`` column, counts are grouped by sector. For the
+``mcf_institution_partnerships.csv`` dataset counts are grouped by
+``institution``.
 """
 
 from collections import Counter
@@ -12,7 +15,7 @@ from typing import List, Tuple
 
 
 def analyze_datasets(dataset_dir: str = "datasets") -> List[Tuple[str, int, Counter]]:
-    """Return record totals and sector counts for each CSV dataset."""
+    """Return record totals and grouped counts for each CSV dataset."""
     dataset_path = Path(dataset_dir)
     results: List[Tuple[str, int, Counter]] = []
     for csv_file in sorted(dataset_path.glob("*.csv")):
@@ -20,8 +23,19 @@ def analyze_datasets(dataset_dir: str = "datasets") -> List[Tuple[str, int, Coun
         total = 0
         with open(csv_file, newline="", encoding="utf-8") as f:
             reader = csv.DictReader(f)
+            if not reader.fieldnames:
+                results.append((csv_file.name, total, counts))
+                continue
+            if "sector" in reader.fieldnames:
+                key = "sector"
+            elif "institution" in reader.fieldnames:
+                key = "institution"
+            else:
+                # Unknown schema - skip
+                results.append((csv_file.name, total, counts))
+                continue
             for row in reader:
-                counts[row["sector"]] += 1
+                counts[row[key]] += 1
                 total += 1
         results.append((csv_file.name, total, counts))
     return results
