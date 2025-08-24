@@ -25,24 +25,44 @@ The repository tracks open-source evidence of long-term influence operations att
 
 ## Installation
 
-1. Install Python dependencies:
+Install the project and its dependencies using either `requirements.txt` or the
+`pyproject.toml` file.
+
+### Using `requirements.txt`
+
+```bash
+pip install -r requirements.txt
+```
+
+### Using `pyproject.toml`
+
+```bash
+pip install .
+```
+
+After installation, run the test suite to verify the setup:
+
+```bash
+pytest
+```
+
+## Working with Data
+
+1. Append records with the `update-datasets` console script:
 
    ```bash
    pip install -e .
    # or
    pip install -r requirements.txt
+
    ```
 
-2. Run the test suite to verify the setup:
+2. Regenerate `datasets/analysis_summary.md` with `analyze-datasets`:
 
    ```bash
-   pytest
+   analyze-datasets
    ```
 
-## Working with Data
-
-1. Use `python scripts/update_datasets.py <file> <profile_id> <sector> <source>` to append records.
-2. Run `python scripts/analyze_datasets.py` to regenerate `datasets/analysis_summary.md`.
 3. Review `datasets/README.md` for schema requirements.
 
 ## Future Research Needs
