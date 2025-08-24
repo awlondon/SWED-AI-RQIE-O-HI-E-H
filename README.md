@@ -53,3 +53,7 @@ Content is provided for research and education. Some material may be incomplete 
 ## Contributing
 
 Pull requests that enhance documentation or supply verifiable evidence are welcome. Remove sensitive personal data and cite sources for all contributions.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
