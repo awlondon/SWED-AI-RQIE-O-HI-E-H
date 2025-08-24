@@ -18,6 +18,7 @@
 - Investigation centers on MSS infiltration of LinkedIn using fake or stolen identities and AI-generated content
 - Current dataset includes 49 AI-flagged images across 11 personas, informing image-analysis tasks in this plan
 - Research goal to document patterns of synthetic or stolen identities underpins deliverables in the final report
+- CSET's [Cyber Employment Report](https://cset.georgetown.edu/wp-content/uploads/t0231_cyber_employment_report_EN.pdf) provides global workforce context and is summarized in `research/cyber_employment_report_summary.md`.
 
 ## Expected Reporting
 - **Orientation Memo** (Hour 1)
