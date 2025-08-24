@@ -40,7 +40,11 @@ Use only sources that meet at least one of the following:
 - Investigate MCF-driven university collaborations that channel academic research toward MSS objectives; see the [main report](../Grok_MSS_AI_Development_Report.md) for context.
 - Identify safeguards to protect international academic partnerships from MCF exploitation.
 
-## Internal Connector Use
-- Prefix proprietary queries with `internal://`.
-- Authenticate with assigned credentials at each session.
-- Log all connector interactions and store retrieved documents in the secure archive.
+## Internal Connector Access
+Guidelines for internal connectors are maintained in a private document. Contributors may request access by contacting the project maintainers through the issue tracker or via the usual private channels. Access is granted on the condition that users:
+
+- Authenticate with their personal credentials.
+- Use connectors solely for project-related research.
+- Log interactions and store any retrieved materials in secure locations.
+
+By requesting access, contributors acknowledge these responsible-use expectations and agree to follow institutional policies.
