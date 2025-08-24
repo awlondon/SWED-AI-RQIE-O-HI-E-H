@@ -15,3 +15,6 @@ Xu was the first Chinese intelligence officer extradited to the United States. A
 ## Citations
 - U.S. Department of Justice, "Chinese Intelligence Officer Convicted of Economic Espionage," November 5, 2021.
 - U.S. Department of Justice, "Chinese Intelligence Officer Sentenced for Economic Espionage," November 16, 2022.
+
+## Further Reading
+- [MSS LinkedIn reference collection](../../MSS_LinkedIn_refs.md)
