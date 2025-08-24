@@ -24,6 +24,7 @@ This article synthesizes open-source research and declassified reporting to outl
 
 ## Implications and Limitations
 China's pursuit of "controllable AI" reflects a balance between technological progress and state security priorities. Open-source evidence indicates robust integration of AI into vulnerability research, surveillance, and military planning. However, many MSS activities remain opaque or unverified. Comparative analysis suggests that while China employs AI aggressively for security purposes, other nations also integrate AI into intelligence, necessitating careful, balanced assessment.
+For up-to-date coverage of MSS practices, see the [MSS AI Intelligence Cycle Report](research/mss_ai_intelligence_cycle_report.md).
 
 ---
 

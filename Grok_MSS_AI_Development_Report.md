@@ -19,4 +19,4 @@ This file summarizes key points from a Grok-provided overview of how China's Min
 - U.S. officials warn that systematic MSS acquisition of AI reduces American technological advantages and enables rapid deployment of low-cost autonomous systems by Chinese firms.
 - Countermeasures include indictments, sanctions, and expanded intelligence sharing, though experts caution that export controls alone may be insufficient.
 - Broader surveillance staffing figures are detailed in [China's Human Monitoring Report](research/china_human_monitoring_report.md), underscoring the domestic scale that supports MSS operations.
-
+- For a detailed analysis of the intelligence cycle, see the [MSS AI Intelligence Cycle Report](research/mss_ai_intelligence_cycle_report.md).
