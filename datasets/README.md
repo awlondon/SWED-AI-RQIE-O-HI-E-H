@@ -12,8 +12,9 @@ All CSV and JSON datasets use the following fields:
 CSV files require a header row; JSON files should be arrays of objects with these keys.
 
 ## Maintaining Data
-- Append records with `python scripts/update_datasets.py <file> <profile_id> <sector> <source>`.
-- Generate summary statistics via `python scripts/analyze_datasets.py` which updates `analysis_summary.md`.
+- Append records with `python` [`update_datasets.py`](../scripts/update_datasets.py) `<file> <profile_id> <sector> <source>`.
+- Generate summary statistics via `python` [`analyze_datasets.py`](../scripts/analyze_datasets.py), which updates `analysis_summary.md`.
+- Validation tests for these scripts live under [`../tests/`](../tests/).
 
 ## Current Files
 - `fake_profiles.csv` – suspected synthetic or compromised LinkedIn profiles.
