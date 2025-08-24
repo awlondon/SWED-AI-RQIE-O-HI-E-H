@@ -1,3 +1,4 @@
+from collections import Counter
 import sys
 from pathlib import Path
 import logging
@@ -50,3 +51,17 @@ def test_analyze_institution_dataset(tmp_path, caplog):
 
     summary = format_summary(results)
     assert "InstA: 2" in summary
+
+
+def test_analyze_malformed_header(tmp_path):
+    data_dir = tmp_path / "datasets"
+    data_dir.mkdir()
+    (data_dir / "bad.csv").write_text("id,name\n1,A\n", encoding="utf-8")
+    results = analyze_datasets(data_dir)
+    assert results == [("bad.csv", 0, Counter())]
+
+
+def test_analyze_missing_directory(tmp_path):
+    missing_dir = tmp_path / "missing"
+    results = analyze_datasets(missing_dir)
+    assert results == []
