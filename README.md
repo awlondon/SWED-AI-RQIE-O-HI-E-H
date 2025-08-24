@@ -18,6 +18,9 @@ The repository tracks open-source evidence of long-term influence operations att
 - [institutions/](institutions/) – institution dossiers with infiltration reports; examples include the [MCF University infiltration report](MCF_University_Infiltration_Report.md).
 - [shell-companies/](shell-companies/) – information on commercial services enabling large-scale persona creation.
 - [MSS_LinkedIn_Infiltration_Analysis__CLAUDE.md](MSS_LinkedIn_Infiltration_Analysis__CLAUDE.md) – analysis of LinkedIn infiltration tactics.
+- [mss_ai_intelligence_cycle_report.md](research/mss_ai_intelligence_cycle_report.md) – integration of AI across the MSS intelligence cycle.
+- [Grok_MSS_AI_Development_Report.md](Grok_MSS_AI_Development_Report.md) – summary of MSS involvement in AI development.
+- [MSS_AI_Intelligence_1995-2025__ANKAA.md](MSS_AI_Intelligence_1995-2025__ANKAA.md) – open-source and declassified intelligence on MSS AI activities.
 - Additional folders contain references, draft reports, and test suites.
 
 ## Installation
