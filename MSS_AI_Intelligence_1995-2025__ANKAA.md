@@ -13,7 +13,7 @@ This article synthesizes open-source research and declassified reporting to outl
 - China's military–civil fusion strategy integrates universities and private firms with defense and intelligence work, fostering partnerships with companies such as Hikvision, Alibaba, and Baidu.[4]
 
 ## AI‑Enabled Surveillance and Cyber Operations
-- Despite advances in cameras, AI, and big‑data analytics, political surveillance in China still relies on manpower from the MSS and the Ministry of Public Security; technology augments but does not replace human monitoring.[5]
+ - Despite advances in cameras, AI, and big‑data analytics, political surveillance in China still relies on manpower from the MSS and the Ministry of Public Security; technology augments but does not replace human monitoring.[5] (see [China Human Monitoring Report](research/china_human_monitoring_report.md))
 - The MSS leverages AI tools for cyber operations and intelligence collection, mirroring efforts by other nations seeking strategic advantage.
 
 ## PLA Adoption of Generative AI
@@ -35,3 +35,4 @@ China's pursuit of "controllable AI" reflects a balance between technological pr
 6. AIbase, "MSS Warns About Data Poisoning," 2024, https://news.aibase.com.
 7. Recorded Future (Insikt Group), "PLA and Generative AI," 2024, https://www.recordedfuture.com.
 8. CSIS Interpret, "China Institutes of Contemporary International Relations (CICIR)," https://interpret.csis.org/original_source/china-institutes-of-contemporary-international-relations-cicir/.
+9. "China Human Monitoring Report," research/china_human_monitoring_report.md.
