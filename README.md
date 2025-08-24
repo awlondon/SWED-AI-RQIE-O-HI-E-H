@@ -29,6 +29,7 @@ The repository tracks open-source evidence of long-term influence operations att
 - Correlate LinkedIn activity with infrastructure such as shell companies or leaked credential sets.
 - Develop tooling for detecting AI-generated media and automated outreach.
 - Compare operations on other platforms to build cross-network intelligence.
+- Monitor export-control developments affecting VR/AR sensor firms and track misuse of advanced voice-cloning models.
 
 ## Usage and Attribution
 

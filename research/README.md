@@ -24,6 +24,7 @@ Use only sources that meet at least one of the following:
 - Verify the identity behind the persona "Chen-Lai."
 - Catalog additional persona clusters and associated infrastructure.
 - Assess long-term outreach patterns to high-value sectors.
+- Evaluate export-control implications for VR/AR sensor companies and track misuse of open-source voice-cloning models.
 
 ## Internal Connector Use
 - Prefix proprietary queries with `internal://`.
