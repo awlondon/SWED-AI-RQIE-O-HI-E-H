@@ -10,11 +10,13 @@ The repository tracks open-source evidence of long-term influence operations att
 
 ## Repository Overview
 
-- **research/** – methodology notes, open questions, and guidance for contributors.
-- **datasets/** – structured CSV/JSON files and summaries used in analysis. Utilities live under `scripts/`.
-- **LinkedIn/** – reports and data tied to LinkedIn investigations, including cluster-specific folders such as `Sesame/`.
-- **case-studies/** – narrative reports examining individual operations.
-- **shell-companies/** – information on commercial services enabling large-scale persona creation.
+- [research/](research/) – methodology notes, open questions, and guidance for contributors.
+- [datasets/](datasets/) – structured CSV/JSON files and summaries used in analysis. Utilities live under [scripts/](scripts/).
+- [LinkedIn/](LinkedIn/) – reports and data tied to LinkedIn investigations, including cluster-specific folders such as `Sesame/`.
+- [case-studies/](case-studies/) – narrative reports examining individual operations.
+- [Intelligence-Analyst/](Intelligence-Analyst/) – planning documents and research schedules for analyst workflows.
+- [shell-companies/](shell-companies/) – information on commercial services enabling large-scale persona creation.
+- [MSS_LinkedIn_Infiltration_Analysis__CLAUDE.md](MSS_LinkedIn_Infiltration_Analysis__CLAUDE.md) – analysis of LinkedIn infiltration tactics.
 - Additional folders contain references, draft reports, and test suites.
 
 ## Installation
@@ -39,11 +41,11 @@ The repository tracks open-source evidence of long-term influence operations att
 
 ## Future Research Needs
 
-- Expand persona catalogues across sectors and languages.
-- Correlate LinkedIn activity with infrastructure such as shell companies or leaked credential sets.
- - Evaluate how global cybersecurity workforce shortages could influence MSS targeting. See CSET's [Cyber Employment Report](https://cset.georgetown.edu/wp-content/uploads/t0231_cyber_employment_report_EN.pdf) and the local [summary](research/cyber_employment_report_summary.md).
-- Develop tooling for detecting AI-generated media and automated outreach.
-- Compare operations on other platforms to build cross-network intelligence.
+- Expand persona catalogues across sectors and languages; see case studies on [Kevin Mallory](case-studies/kevin-mallory/) and notes on [Chen Lai](case-studies/chen-lai/notes.md).
+- Correlate LinkedIn activity with infrastructure such as shell companies or leaked credential sets; review the [shell company profiles](shell-companies/README.md) and [MSS LinkedIn infiltration analysis](MSS_LinkedIn_Infiltration_Analysis__CLAUDE.md).
+- Evaluate how global cybersecurity workforce shortages could influence MSS targeting. See CSET's [Cyber Employment Report](https://cset.georgetown.edu/wp-content/uploads/t0231_cyber_employment_report_EN.pdf) and the local [summary](research/cyber_employment_report_summary.md).
+- Develop tooling for detecting AI-generated media and automated outreach; consult [research notes](research/README.md) for methodological guidance.
+- Compare operations on other platforms to build cross-network intelligence, aligning with insights from the [Yanjun Xu case study](case-studies/yanjun-xu/).
 - Monitor export-control developments affecting VR/AR sensor firms and track misuse of advanced voice-cloning models.
 
 ## Usage and Attribution
