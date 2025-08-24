@@ -47,6 +47,7 @@ The repository tracks open-source evidence of long-term influence operations att
 - Develop tooling for detecting AI-generated media and automated outreach; consult [research notes](research/README.md) for methodological guidance.
 - Compare operations on other platforms to build cross-network intelligence, aligning with insights from the [Yanjun Xu case study](case-studies/yanjun-xu/).
 - Monitor export-control developments affecting VR/AR sensor firms and track misuse of advanced voice-cloning models.
+- Investigate state-driven human monitoring efforts; review the [China human monitoring report](research/china_human_monitoring_report.md).
 
 ## Usage and Attribution
 
