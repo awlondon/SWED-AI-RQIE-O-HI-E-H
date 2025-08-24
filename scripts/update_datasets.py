@@ -17,23 +17,74 @@ Example:
 import argparse
 import csv
 from pathlib import Path
+from typing import Iterable, Sequence
 
-# Allowed sector classifications for dataset records
-ALLOWED_SECTORS = {
-    "finance",
-    "technology",
-    "government",
-    "energy",
-    "healthcare",
-}
+DEFAULT_CONFIG_PATH = Path(__file__).resolve().parents[1] / "config.yml"
+
+
+def load_config(config_path: str | Path | None = None) -> dict:
+    """Load configuration from a minimal YAML file.
+
+    Only supports mappings of lists of strings (e.g. ``allowed_sectors``).
+    """
+
+    path = Path(config_path) if config_path else DEFAULT_CONFIG_PATH
+    if not path.exists():
+        raise FileNotFoundError(f"Configuration file {path} not found")
+
+    data: dict[str, list[str]] = {}
+    current_key: str | None = None
+    with open(path, encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            if line.endswith(":"):
+                current_key = line[:-1]
+                data[current_key] = []
+            elif line.startswith("-") and current_key:
+                data[current_key].append(line[1:].strip())
+    return data
+
+
+def _append_csv_row(
+    file_path: str | Path,
+    fieldnames: Sequence[str],
+    row: dict,
+    unique_fields: Iterable[str],
+) -> None:
+    """Append a row to a CSV file with header insertion and duplicate checks."""
+
+    file_path_obj = Path(file_path)
+    if not file_path_obj.parent.exists():
+        raise FileNotFoundError(f"Directory {file_path_obj.parent} does not exist")
+
+    existing_keys = set()
+    if file_path_obj.exists() and file_path_obj.stat().st_size > 0:
+        with open(file_path_obj, newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            existing_keys = {
+                tuple(r[field] for field in unique_fields) for r in reader
+            }
+
+    key = tuple(row[field] for field in unique_fields)
+    if key in existing_keys:
+        raise ValueError(f"record {key} already exists in {file_path_obj}")
+
+    with open(file_path_obj, "a", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        if not file_path_obj.exists() or file_path_obj.stat().st_size == 0:
+            writer.writeheader()
+        writer.writerow(row)
 
 
 def append_partnership(
-    file_path: str,
+    file_path: str | Path,
     institution: str,
     partner: str,
     partnership_type: str,
     source: str,
+    config_path: str | Path | None = None,
 ) -> None:
     """Append a partnership record to a dataset CSV file."""
 
@@ -42,33 +93,26 @@ def append_partnership(
     ):
         raise ValueError("institution, partner, partnership_type and source must be non-empty")
 
-    file_path_obj = Path(file_path)
+    # Ensure configuration exists for future options
+    load_config(config_path)
+
     fieldnames = ["institution", "partner", "partnership_type", "source"]
-    existing = set()
+    row = {
+        "institution": institution,
+        "partner": partner,
+        "partnership_type": partnership_type,
+        "source": source,
+    }
+    _append_csv_row(file_path, fieldnames, row, ["institution", "partner"])
 
-    if file_path_obj.exists() and file_path_obj.stat().st_size > 0:
-        with open(file_path, newline="", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            existing = {(row["institution"], row["partner"]) for row in reader}
-    if (institution, partner) in existing:
-        raise ValueError(
-            f"partnership {institution}-{partner} already exists in {file_path}"
-        )
 
-    with open(file_path, "a", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        if not file_path_obj.exists() or file_path_obj.stat().st_size == 0:
-            writer.writeheader()
-        writer.writerow(
-            {
-                "institution": institution,
-                "partner": partner,
-                "partnership_type": partnership_type,
-                "source": source,
-            }
-        )
-
-def append_record(file_path: str, profile_id: str, sector: str, source: str) -> None:
+def append_record(
+    file_path: str | Path,
+    profile_id: str,
+    sector: str,
+    source: str,
+    config_path: str | Path | None = None,
+) -> None:
     """Append a record to a dataset CSV file.
 
     Parameters
@@ -85,33 +129,25 @@ def append_record(file_path: str, profile_id: str, sector: str, source: str) -> 
     # Validate inputs
     if not profile_id.strip() or not sector.strip() or not source.strip():
         raise ValueError("profile_id, sector, and source must be non-empty")
-    if sector not in ALLOWED_SECTORS:
-        raise ValueError(f"sector must be one of {sorted(ALLOWED_SECTORS)}")
 
-    file_path_obj = Path(file_path)
+    config = load_config(config_path)
+    allowed = set(config.get("allowed_sectors", []))
+    if sector not in allowed:
+        raise ValueError(f"sector must be one of {sorted(allowed)}")
+
     fieldnames = ["profile_id", "sector", "source"]
-    existing_ids = set()
+    row = {"profile_id": profile_id, "sector": sector, "source": source}
+    _append_csv_row(file_path, fieldnames, row, ["profile_id"])
 
-    if file_path_obj.exists() and file_path_obj.stat().st_size > 0:
-        with open(file_path, newline="", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            existing_ids = {row["profile_id"] for row in reader}
-    if profile_id in existing_ids:
-        raise ValueError(f"profile_id {profile_id} already exists in {file_path}")
-
-    with open(file_path, "a", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        if not file_path_obj.exists() or file_path_obj.stat().st_size == 0:
-            writer.writeheader()
-        writer.writerow({
-            "profile_id": profile_id,
-            "sector": sector,
-            "source": source,
-        })
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Append a record to a dataset CSV."
+        description="Append a record to a dataset CSV.",
+    )
+    parser.add_argument(
+        "--config",
+        default=str(DEFAULT_CONFIG_PATH),
+        help="Path to configuration YAML file",
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
@@ -139,7 +175,9 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.command == "profile":
-        append_record(args.file_path, args.profile_id, args.sector, args.source)
+        append_record(
+            args.file_path, args.profile_id, args.sector, args.source, args.config
+        )
         print(f"Appended record for {args.profile_id} to {args.file_path}")
     else:
         append_partnership(
@@ -148,6 +186,7 @@ if __name__ == "__main__":
             args.partner,
             args.partnership_type,
             args.source,
+            args.config,
         )
         print(
             f"Appended partnership for {args.institution}-{args.partner} to {args.file_path}"

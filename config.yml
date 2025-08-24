@@ -1,0 +1,6 @@
+allowed_sectors:
+  - finance
+  - technology
+  - government
+  - energy
+  - healthcare
