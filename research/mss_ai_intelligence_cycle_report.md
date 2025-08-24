@@ -6,15 +6,15 @@ China's Ministry of State Security (MSS) integrates artificial intelligence and 
 ## Where AI Shows Up in MSS-Linked Operations
 1. **Targeting and reconnaissance at scale.** China-nexus actors such as *Charcoal Typhoon* and *Salmon Typhoon* query LLMs for organization and personnel details, summarize open-source documents, and craft spear-phishing pretexts.[1][2]
 2. **Spear-phishing and social engineering content.** LLMs help draft multilingual lures, refine email copy, and tailor phishing content to victims' contexts, lowering language and tradecraft barriers.[1][2]
-3. **Covert influence and information operations.** PRC-linked networks like *DRAGONBRIDGE* experiment with AI-generated avatars, synthetic news presenters, and rapid content runs to probe voter fault lines.[3][4]
+3. **Covert influence and information operations.** PRC-linked networks like *DRAGONBRIDGE* experiment with AI-generated avatars, synthetic news presenters, and rapid content runs to probe voter fault lines.[3][4] Additional examples appear in the [MSS LinkedIn Infiltration Analysis](../MSS_LinkedIn_Infiltration_Analysis__CLAUDE.md).
 4. **Red-team support.** Operators leverage LLMs to translate technical documents, debug code, generate scripts, and research process-hiding or evasion concepts that compress workload.[1]
 5. **Post-compromise triage.** LLMs provide translation and summarization for large data hauls, accelerating prioritization and analysis after intrusions.[1][5]
 
 ## Explicit MSS Connections
-- **APT31 (Zirconium).** U.S. and U.K. actions tie this group to front company *Wuhan Xiaoruizhi* and the Hubei State Security Department, illustrating that MSS-directed operators adopt AI-enabled tradecraft.[6]
+- **APT31 (Zirconium).** U.S. and U.K. actions tie this group to front company *Wuhan Xiaoruizhi* and the Hubei State Security Department, illustrating that MSS-directed operators adopt AI-enabled tradecraft.[6] For broader context on AI development, see the [Grok MSS AI Development Report](../Grok_MSS_AI_Development_Report.md).
 - **APT40 (Leviathan/TA423).** Charged by the U.S. Department of Justice as operating on behalf of the Hainan State Security Department, with detailed tactics published by CISA.[7][8]
 - **MSS Technical Bureaus.** The MSS 13th Bureau (CNITSEC) has been linked to manipulation of China's National Vulnerability Database, aligning vulnerability intelligence with operational needs.[9]
-- **Contractor Ecosystem.** Leaks from private firm **i-SOON** reveal state intelligence customers sourcing intrusion services and big-data OSINT tools, enabling rapid adoption of AI-supported methods.[10][11][12][13][14]
+- **Contractor Ecosystem.** Leaks from private firm **i-SOON** reveal state intelligence customers sourcing intrusion services and big-data OSINT tools, enabling rapid adoption of AI-supported methods.[10][11][12][13][14] See the [shell company ecosystem overview](../shell-companies/README.md) for related networks.
 
 ## AI-Enabled Task Examples
 | Intelligence Task | AI Use | Evidence |
