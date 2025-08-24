@@ -1,6 +1,7 @@
 import csv
 import sys
 from pathlib import Path
+import logging
 
 import pytest
 
@@ -8,7 +9,8 @@ sys.path.append(str(Path(__file__).resolve().parents[1]))
 from scripts.update_datasets import append_record, append_partnership
 
 
-def test_append_record_success(tmp_path):
+def test_append_record_success(tmp_path, caplog):
+    caplog.set_level(logging.INFO)
     csv_file = tmp_path / "data.csv"
     append_record(csv_file, "P123", "finance", "osint")
     append_record(csv_file, "P124", "technology", "report")
@@ -20,9 +22,12 @@ def test_append_record_success(tmp_path):
         {"profile_id": "P123", "sector": "finance", "source": "osint"},
         {"profile_id": "P124", "sector": "technology", "source": "report"},
     ]
+    assert "Appended record for P123" in caplog.text
+    assert "Appended record for P124" in caplog.text
 
 
-def test_append_record_duplicate_profile_id(tmp_path):
+def test_append_record_duplicate_profile_id(tmp_path, caplog):
+    caplog.set_level(logging.ERROR)
     csv_file = tmp_path / "data.csv"
     append_record(csv_file, "P123", "finance", "osint")
     with pytest.raises(ValueError):
@@ -34,12 +39,15 @@ def test_append_record_duplicate_profile_id(tmp_path):
     assert rows == [
         {"profile_id": "P123", "sector": "finance", "source": "osint"}
     ]
+    assert "already exists" in caplog.text
 
 
-def test_append_record_invalid_sector(tmp_path):
+def test_append_record_invalid_sector(tmp_path, caplog):
+    caplog.set_level(logging.ERROR)
     csv_file = tmp_path / "data.csv"
     with pytest.raises(ValueError):
         append_record(csv_file, "P123", "invalid", "osint")
+    assert "sector must be one of" in caplog.text
 
 
 @pytest.mark.parametrize(
@@ -50,13 +58,16 @@ def test_append_record_invalid_sector(tmp_path):
         ("P123", "finance", ""),
     ],
 )
-def test_append_record_empty_fields(tmp_path, profile_id, sector, source):
+def test_append_record_empty_fields(tmp_path, profile_id, sector, source, caplog):
+    caplog.set_level(logging.ERROR)
     csv_file = tmp_path / "data.csv"
     with pytest.raises(ValueError):
         append_record(csv_file, profile_id, sector, source)
+    assert "profile_id, sector, and source must be non-empty" in caplog.text
 
 
-def test_append_partnership_success(tmp_path):
+def test_append_partnership_success(tmp_path, caplog):
+    caplog.set_level(logging.INFO)
     csv_file = tmp_path / "mcf.csv"
     append_partnership(csv_file, "InstA", "Partner1", "research", "osint")
     append_partnership(csv_file, "InstB", "Partner2", "education", "report")
@@ -78,9 +89,12 @@ def test_append_partnership_success(tmp_path):
             "source": "report",
         },
     ]
+    assert "Appended partnership for InstA-Partner1" in caplog.text
+    assert "Appended partnership for InstB-Partner2" in caplog.text
 
 
-def test_append_partnership_duplicate(tmp_path):
+def test_append_partnership_duplicate(tmp_path, caplog):
+    caplog.set_level(logging.ERROR)
     csv_file = tmp_path / "mcf.csv"
     append_partnership(csv_file, "InstA", "Partner1", "research", "osint")
     with pytest.raises(ValueError):
@@ -97,6 +111,7 @@ def test_append_partnership_duplicate(tmp_path):
             "source": "osint",
         }
     ]
+    assert "already exists" in caplog.text
 
 
 @pytest.mark.parametrize(
@@ -109,11 +124,16 @@ def test_append_partnership_duplicate(tmp_path):
     ],
 )
 def test_append_partnership_empty_fields(
-    tmp_path, institution, partner, partnership_type, source
+    tmp_path, institution, partner, partnership_type, source, caplog
 ):
+    caplog.set_level(logging.ERROR)
     csv_file = tmp_path / "mcf.csv"
     with pytest.raises(ValueError):
         append_partnership(csv_file, institution, partner, partnership_type, source)
+    assert (
+        "institution, partner, partnership_type and source must be non-empty"
+        in caplog.text
+    )
 
 
 def test_append_record_creates_file_when_missing(tmp_path):
