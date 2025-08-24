@@ -1,64 +1,39 @@
 # MSS LinkedIn Infiltration Investigation
 
-This repository collects open-source intelligence on suspected operations run by China's Ministry of State Security (MSS). It documents long-term infiltration of professional networks—particularly LinkedIn—using fake or stolen identities and AI-generated content. The repo serves as a hub for analytic reports, evidence sets, and research plans that help investigators and defenders understand these campaigns.
+The repository tracks open-source evidence of long-term influence operations attributed to the Chinese Ministry of State Security (MSS). It focuses on how synthetic or stolen identities exploit professional platforms, especially LinkedIn, to build trust and collect intelligence.
 
 ## Mission
 
-- Preserve and organize evidence of MSS-linked professional network operations.
-- Analyze AI-generated personas, outreach patterns, and supporting infrastructure.
-- Share methods and findings to encourage collaboration across the security community.
+- Preserve and organize artifacts of suspected MSS-run professional network campaigns.
+- Analyze persona clusters, outreach tactics, and supporting infrastructure.
+- Share reproducible methods so researchers and defenders can collaborate.
 
-## Contents
+## Repository Overview
 
-- [research/](research/) – central hub for analytic notes and methodology. Start here and read `research/README.md` before contributing elsewhere.
-- [case-studies/](case-studies/) – in-depth examinations of individual infiltration campaigns.
-- [shell-companies/](shell-companies/) – information on front or shell entities linked to MSS activities.
-- [datasets/](datasets/) – raw data used in this project. Run the `update.sh` script to fetch the latest files into this directory.
+- **research/** – methodology notes, open questions, and guidance for contributors.
+- **datasets/** – structured CSV/JSON files and summaries used in analysis. Utilities live under `scripts/`.
+- **LinkedIn/** – reports and data tied to LinkedIn investigations, including cluster-specific folders such as `Sesame/`.
+- **case-studies/** – narrative reports examining individual operations.
+- **shell-companies/** – information on commercial services enabling large-scale persona creation.
+- Additional folders contain references, draft reports, and test suites.
 
-## Potential Activities
+## Working with Data
 
-- Catalog suspicious LinkedIn accounts and associated artifacts.
-- Perform image and text analysis to detect synthetic media or stolen credentials.
-- Map relationships between accounts and track outreach behavior over time.
-- Correlate findings with public records and breach data.
-- Share research methods and evidence for peer review.
+1. Use `python scripts/update_datasets.py <file> <profile_id> <sector> <source>` to append records.
+2. Run `python scripts/analyze_datasets.py` to regenerate `datasets/analysis_summary.md`.
+3. Review `datasets/README.md` for schema requirements.
 
-## Objectives
+## Future Research Needs
 
-- Understand how MSS-directed campaigns leverage professional platforms.
-- Identify tactics used to build credibility and manipulate targets.
-- Provide resources for defenders to recognize and counter infiltration.
-- Encourage transparency and information sharing across research communities.
+- Expand persona catalogues across sectors and languages.
+- Correlate LinkedIn activity with infrastructure such as shell companies or leaked credential sets.
+- Develop tooling for detecting AI-generated media and automated outreach.
+- Compare operations on other platforms to build cross-network intelligence.
 
-## Repository Structure
+## Usage and Attribution
 
-- `LinkedIn/` – data and reports related to LinkedIn persona investigations.
-- `datasets/` – structured CSVs on profiles and indictments. Run `python scripts/analyze_datasets.py` to refresh `datasets/analysis_summary.md`.
-- `scripts/` – utilities for updating datasets and generating analytic summaries.
-- Additional folders provide research notes, case studies, and references.
-
-## Full Spectrum Dataset Analysis
-
-The current datasets combine both newly added and pre-existing records:
-
-- Fake profiles: 2 entries spanning the energy and technology sectors.
-- Indictments: 2 entries covering finance and government sectors.
-
-See `datasets/analysis_summary.md` for a detailed breakdown.
-
-## Goals
-
-1. Document patterns of synthetic or stolen identities used to build trust over long periods.
-2. Track potential corporate targeting and network infiltration.
-3. Support wider research into state-sponsored information operations and counter-intelligence.
-
-## Usage
-
-All material is provided for research and educational purposes. The data may contain false positives or unverified claims; exercise caution and seek independent confirmation before attribution.
-
-Run the included `update.sh` script to refresh data stored under `datasets/`.
+Content is provided for research and education. Some material may be incomplete or unverified; corroborate with independent sources before attribution.
 
 ## Contributing
 
-Contributions that refine documentation or add verifiable evidence are welcome. Please remove sensitive personal information and note sources for any submissions.
-
+Pull requests that enhance documentation or supply verifiable evidence are welcome. Remove sensitive personal data and cite sources for all contributions.

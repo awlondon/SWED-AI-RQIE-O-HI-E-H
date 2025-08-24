@@ -1,7 +1,14 @@
 # LinkedIn Investigations
 
-This directory contains artifacts and reports on suspicious LinkedIn activity linked to potential Ministry of State Security (MSS) operations.
+Evidence and reports related to LinkedIn personas suspected of MSS involvement.
 
-## Contents
-- `Ankaa_Intel_Report__08.20.25.md` – background intelligence on MSS adoption of AI.
-- `Sesame/` – evidence relating to a cluster of suspicious personas associated with the company "Sesame," including a customer-service chat with LinkedIn's Help Assistant.
+## Structure
+- `Ankaa_Intel_Report__08.20.25.md` – background on MSS adoption of AI.
+- `Sesame/` – artifacts for the "Sesame" persona cluster, including suspected identity theft and fabrication cases.
+
+New persona clusters should be added as subdirectories containing raw exports, screenshots, and analytic notes. Include a README in each folder summarizing key findings and source links.
+
+## Future Work
+- Map relationships between clusters and underlying infrastructure.
+- Track account takedowns and resurrected identities.
+- Compare LinkedIn behavior with presence on other platforms.

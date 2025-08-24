@@ -1,30 +1,31 @@
-# Last updated: 2025-08-22
+# Research Notes
 
-## Investigation Goals
-- Map the scope and methods of influence operations targeting the UK and abroad.
-- Identify key actors, channels, and technologies involved.
-- Provide actionable insights for defensive measures and policy recommendations.
+_Last updated: 2025-08-22_
 
-## Trusted Source Criteria
-- Primary documents or datasets from official or verifiable institutions.
-- Reputable media outlets with transparent editorial standards.
-- Peer-reviewed research or publications from recognized experts.
-- Cross-verified information from at least two independent sources.
+This directory collects planning notes and analytic guidance for investigating MSS-linked influence operations.
 
-## Citation Format
-Citations should follow this template:
-```
-Author or Organization, "Title," Source or Publication, Date, URL.
-```
-Include page numbers or timestamps when available.
+## Current Objectives
+- Map tactics, targets, and technologies used against UK and allied networks.
+- Identify key actors, channels, and enabling infrastructure.
+- Provide actionable insight for defenders and policy makers.
 
-## Open Questions
-- Reliable figures on non-UK targeting efforts.
-- Verification of the individual or entity known as "Chen-Lai."
+## Source Evaluation
+Use only sources that meet at least one of the following:
+- Official documents or datasets from verifiable institutions.
+- Reputable media with transparent editorial standards.
+- Peer-reviewed or expert publications.
+- Information confirmed by two or more independent sources.
 
-## Internal Connector Usage
-- Use the internal connector interface to query proprietary databases.
-- Prefix internal requests with `internal://` followed by the resource path.
-- Authenticate with your assigned credentials before each session.
-- Log all connector queries and store retrieved documents in the secure archive.
+## Citation Style
+`Author or Organization, "Title," Publication, Date, URL.` Include page numbers or timestamps when available.
 
+## Open Questions & Future Work
+- Quantify targeting beyond the UK.
+- Verify the identity behind the persona "Chen-Lai."
+- Catalog additional persona clusters and associated infrastructure.
+- Assess long-term outreach patterns to high-value sectors.
+
+## Internal Connector Use
+- Prefix proprietary queries with `internal://`.
+- Authenticate with assigned credentials at each session.
+- Log all connector interactions and store retrieved documents in the secure archive.
