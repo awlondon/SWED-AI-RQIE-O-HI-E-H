@@ -11,6 +11,10 @@
 - government: 1
 
 ## mcf_institution_partnerships.csv
-- Total records: 3
-- InstA: 2
-- InstB: 1
+- Total records: 6
+- Georgia Institute of Technology: 1
+- Massachusetts Institute of Technology: 1
+- Stanford University: 1
+- University of California Berkeley: 1
+- University of Michigan: 1
+- University of Washington: 1

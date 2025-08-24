@@ -12,6 +12,9 @@ from collections import Counter
 import csv
 from pathlib import Path
 from typing import List, Tuple
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 def analyze_datasets(dataset_dir: str = "datasets") -> List[Tuple[str, int, Counter]]:
@@ -19,6 +22,7 @@ def analyze_datasets(dataset_dir: str = "datasets") -> List[Tuple[str, int, Coun
     dataset_path = Path(dataset_dir)
     results: List[Tuple[str, int, Counter]] = []
     for csv_file in sorted(dataset_path.glob("*.csv")):
+        logger.info("Analyzing %s", csv_file.name)
         counts: Counter = Counter()
         total = 0
         with open(csv_file, newline="", encoding="utf-8") as f:
@@ -31,7 +35,7 @@ def analyze_datasets(dataset_dir: str = "datasets") -> List[Tuple[str, int, Coun
             elif "institution" in reader.fieldnames:
                 key = "institution"
             else:
-                # Unknown schema - skip
+                logger.warning("Unknown schema for %s; skipping", csv_file.name)
                 results.append((csv_file.name, total, counts))
                 continue
             for row in reader:
@@ -54,8 +58,13 @@ def format_summary(results: List[Tuple[str, int, Counter]]) -> str:
 
 
 if __name__ == "__main__":
-    results = analyze_datasets()
-    summary = format_summary(results)
-    output_file = Path("datasets/analysis_summary.md")
-    output_file.write_text(summary, encoding="utf-8")
-    print(f"Wrote summary to {output_file}")
+    logging.basicConfig(level=logging.INFO)
+    try:
+        results = analyze_datasets()
+        summary = format_summary(results)
+        output_file = Path("datasets/analysis_summary.md")
+        output_file.write_text(summary, encoding="utf-8")
+        logger.info("Wrote summary to %s", output_file)
+    except Exception:
+        logger.exception("Error analyzing datasets")
+        raise
