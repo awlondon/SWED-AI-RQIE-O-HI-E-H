@@ -1,6 +1,6 @@
 # Sesame Persona Investigation
 
-This folder consolidates evidence on LinkedIn accounts linked to the company "Sesame" and suspected of using fabricated or stolen identities.
+This folder consolidates evidence on LinkedIn accounts linked to the company "Sesame" and suspected of using fabricated or stolen identities. For broader context on the overall investigation, consult the parent [LinkedIn README](../README.md).
 See [LinkedIn Infiltration Research Plan](../../Intelligence-Analyst/LinkedIn_Infiltration_Research_Plan.md) for methodology.
 
 ## Key Items
@@ -13,6 +13,15 @@ See [LinkedIn Infiltration Research Plan](../../Intelligence-Analyst/LinkedIn_In
 
 Current findings indicate no U.S. export ban on Zinn Labs' eye-tracking technology and no credible evidence that Sesame acts as an MSS front. However, open-source voice models could still be misused for impersonation or social engineering.
 
+## Related Datasets
+- [`fake_profiles.csv`](../../datasets/fake_profiles.csv) – suspected synthetic or compromised LinkedIn profiles.
+- [`mcf_institution_partnerships.csv`](../../datasets/mcf_institution_partnerships.csv) – collaborations touching Sesame and Zinn Labs.
+
+## Related Case Studies
+- [Kevin Mallory](../../case-studies/kevin-mallory/README.md) – contacted via LinkedIn and convicted of espionage.
+- [Yanjun Xu](../../case-studies/yanjun-xu/README.md) – used talent recruitment programs for technology theft.
+
 ## Related Institutions
 - [Sesame](../../institutions/sesame/README.md) – corporate background and linked personas.
 - [Zinn Labs](../../institutions/zinn-labs/README.md) – acquisition details and technology considerations.
+- [Stanford University](../../institutions/stanford/README.md) – affiliation of professor Gordon Wetzstein, cited in identity-theft leads.
