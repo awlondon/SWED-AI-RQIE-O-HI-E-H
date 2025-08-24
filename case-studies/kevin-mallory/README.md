@@ -14,3 +14,6 @@ Mallory was found guilty of transmitting national defense information to a forei
 ## Citations
 - U.S. Department of Justice, "Former CIA Officer Sentenced to Prison for Espionage," May 17, 2019.
 - U.S. Department of Justice, "Former CIA Officer Convicted of Espionage," June 8, 2018.
+
+## Further Reading
+- [MSS LinkedIn reference collection](../../MSS_LinkedIn_refs.md)
