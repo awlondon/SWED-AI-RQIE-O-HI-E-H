@@ -41,6 +41,14 @@ using the columns:
 - Generate summary statistics via `python`
   [`analyze_datasets.py`](../scripts/analyze_datasets.py), which updates
   `analysis_summary.md`.
+- Validate schema compliance and check `source` URLs with `python`
+  [`validate_data.py`](../scripts/validate_data.py). Example:
+
+  ```bash
+  python scripts/validate_data.py datasets/fake_profiles.csv '{"profile_id": "str", "sector": "str", "source": "str"}'
+  ```
+  The script flags malformed rows, detects basic PII and offers hashing utilities
+  for anonymization.
 - Validation tests for these scripts live under [`../tests/`](../tests/).
 
 ## Current Files
