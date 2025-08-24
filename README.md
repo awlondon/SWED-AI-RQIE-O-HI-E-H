@@ -17,6 +17,20 @@ The repository tracks open-source evidence of long-term influence operations att
 - **shell-companies/** – information on commercial services enabling large-scale persona creation.
 - Additional folders contain references, draft reports, and test suites.
 
+## Installation
+
+1. Install Python dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. Run the test suite to verify the setup:
+
+   ```bash
+   pytest
+   ```
+
 ## Working with Data
 
 1. Use `python scripts/update_datasets.py <file> <profile_id> <sector> <source>` to append records.
