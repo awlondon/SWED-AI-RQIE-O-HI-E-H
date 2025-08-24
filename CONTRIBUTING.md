@@ -13,6 +13,7 @@
 - Provide a clear summary and list of changes.
 - Cite sources for all factual claims using the format described in `research/`.
 - Engage respectfully during code reviews and address feedback promptly.
+- Follow the [style guide](docs/STYLE.md) for citation format and narrative structure.
 
 ## Working Tree Hygiene
 - Keep your working tree clean: commit related changes and remove generated or temporary files.
