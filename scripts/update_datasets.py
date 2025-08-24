@@ -17,6 +17,9 @@ Example:
 import argparse
 import csv
 from pathlib import Path
+import logging
+
+logger = logging.getLogger(__name__)
 
 # Allowed sector classifications for dataset records
 ALLOWED_SECTORS = {
@@ -40,7 +43,12 @@ def append_partnership(
     if not all(
         field.strip() for field in [institution, partner, partnership_type, source]
     ):
-        raise ValueError("institution, partner, partnership_type and source must be non-empty")
+        logger.error(
+            "institution, partner, partnership_type and source must be non-empty"
+        )
+        raise ValueError(
+            "institution, partner, partnership_type and source must be non-empty"
+        )
 
     file_path_obj = Path(file_path)
     fieldnames = ["institution", "partner", "partnership_type", "source"]
@@ -51,6 +59,9 @@ def append_partnership(
             reader = csv.DictReader(f)
             existing = {(row["institution"], row["partner"]) for row in reader}
     if (institution, partner) in existing:
+        logger.error(
+            "partnership %s-%s already exists in %s", institution, partner, file_path
+        )
         raise ValueError(
             f"partnership {institution}-{partner} already exists in {file_path}"
         )
@@ -67,6 +78,9 @@ def append_partnership(
                 "source": source,
             }
         )
+    logger.info(
+        "Appended partnership for %s-%s to %s", institution, partner, file_path
+    )
 
 def append_record(file_path: str, profile_id: str, sector: str, source: str) -> None:
     """Append a record to a dataset CSV file.
@@ -84,8 +98,10 @@ def append_record(file_path: str, profile_id: str, sector: str, source: str) -> 
     """
     # Validate inputs
     if not profile_id.strip() or not sector.strip() or not source.strip():
+        logger.error("profile_id, sector, and source must be non-empty")
         raise ValueError("profile_id, sector, and source must be non-empty")
     if sector not in ALLOWED_SECTORS:
+        logger.error("sector must be one of %s", sorted(ALLOWED_SECTORS))
         raise ValueError(f"sector must be one of {sorted(ALLOWED_SECTORS)}")
 
     file_path_obj = Path(file_path)
@@ -97,6 +113,7 @@ def append_record(file_path: str, profile_id: str, sector: str, source: str) -> 
             reader = csv.DictReader(f)
             existing_ids = {row["profile_id"] for row in reader}
     if profile_id in existing_ids:
+        logger.error("profile_id %s already exists in %s", profile_id, file_path)
         raise ValueError(f"profile_id {profile_id} already exists in {file_path}")
 
     with open(file_path, "a", newline="", encoding="utf-8") as f:
@@ -108,8 +125,10 @@ def append_record(file_path: str, profile_id: str, sector: str, source: str) -> 
             "sector": sector,
             "source": source,
         })
+    logger.info("Appended record for %s to %s", profile_id, file_path)
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     parser = argparse.ArgumentParser(
         description="Append a record to a dataset CSV."
     )
@@ -138,17 +157,26 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    if args.command == "profile":
-        append_record(args.file_path, args.profile_id, args.sector, args.source)
-        print(f"Appended record for {args.profile_id} to {args.file_path}")
-    else:
-        append_partnership(
-            args.file_path,
-            args.institution,
-            args.partner,
-            args.partnership_type,
-            args.source,
-        )
-        print(
-            f"Appended partnership for {args.institution}-{args.partner} to {args.file_path}"
-        )
+    try:
+        if args.command == "profile":
+            append_record(args.file_path, args.profile_id, args.sector, args.source)
+            logger.info(
+                "Appended record for %s to %s", args.profile_id, args.file_path
+            )
+        else:
+            append_partnership(
+                args.file_path,
+                args.institution,
+                args.partner,
+                args.partnership_type,
+                args.source,
+            )
+            logger.info(
+                "Appended partnership for %s-%s to %s",
+                args.institution,
+                args.partner,
+                args.file_path,
+            )
+    except Exception:
+        logger.exception("Failed to update dataset")
+        raise
