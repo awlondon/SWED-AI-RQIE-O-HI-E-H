@@ -4,7 +4,7 @@
 This article synthesizes open-source research and declassified reporting to outline how China's Ministry of State Security (MSS) engages with artificial intelligence. Sources include the Atlantic Council (vulnerability research), Wikipedia entries on CNITSEC and the MSS (organizational structure), The Diplomat (military–civil fusion), PRC Leader (surveillance practices), AIbase (data-poisoning risks), and Recorded Future (PLA use of generative AI). All claims are derived from publicly available materials, and classified MSS activities remain difficult to verify.
 
 ## MSS Structure and Strategic Focus
-- The MSS combines domestic security and foreign intelligence functions; scholars note that the China Institutes of Contemporary International Relations (CICIR) operates under MSS oversight even though Beijing does not publicly acknowledge the linkage.[3]
+- The MSS combines domestic security and foreign intelligence functions; scholars note that the China Institutes of Contemporary International Relations (CICIR) operates under MSS oversight even though Beijing does not publicly acknowledge the linkage.[3][8]
 - MSS writings emphasize emerging technologies, including AI, as both opportunities and security risks.
 
 ## Vulnerability Research and University Partnerships
@@ -34,3 +34,4 @@ China's pursuit of "controllable AI" reflects a balance between technological pr
 5. PRC Leader, "Political Surveillance Still Depends on Manpower," 2023, https://prcleader.org.
 6. AIbase, "MSS Warns About Data Poisoning," 2024, https://news.aibase.com.
 7. Recorded Future (Insikt Group), "PLA and Generative AI," 2024, https://www.recordedfuture.com.
+8. CSIS Interpret, "China Institutes of Contemporary International Relations (CICIR)," https://interpret.csis.org/original_source/china-institutes-of-contemporary-international-relations-cicir/.
