@@ -2,6 +2,11 @@
 
 Contains a single photo (`IMG_7370.png`) believed to show the real Gordon Wetzstein. The LinkedIn profile in question likely reuses this image without authorization, indicating a stolen identity scenario. Wetzstein co-founded Zinn Labs, reportedly acquired by Sesame, and is currently unreachable—possibly on sabbatical in a remote area until April 2026. Any text embedded in the image can be extracted with OCR tools.
 
+For broader context within the Sesame cluster, see the [parent README](../README.md).
+
+## Related Institutions
+- [Stanford University](../../../../institutions/stanford/README.md)
+
 For project navigation, see the parent [LinkedIn README](../../../README.md).
 
 ## Related Datasets
@@ -15,3 +20,4 @@ For project navigation, see the parent [LinkedIn README](../../../README.md).
 - [Sesame](../../../../institutions/sesame/README.md) – corporate background and linked personas.
 - [Zinn Labs](../../../../institutions/zinn-labs/README.md) – acquisition details and technology considerations.
 - [Stanford University](../../../../institutions/stanford/README.md) – affiliation of Gordon Wetzstein.
+
