@@ -20,6 +20,10 @@ New persona clusters should be added as subdirectories containing raw exports, s
 - [UCLA](../institutions/ucla/README.md) – prominent U.S. institution cited in suspicious resumes.
 - [USC](../institutions/usc/README.md) – another common reference point in suspect educational histories.
 
+## Supporting Resources
+- [Datasets](../datasets/) – structured records like fake profiles and indictments help validate suspicious personas and spot activity patterns.
+- [Shell Companies](../shell-companies/) – documentation on automation vendors exposes infrastructure enabling coordinated fake LinkedIn profiles.
+
 ## Future Work
 - Map relationships between clusters and underlying infrastructure.
 - Track account takedowns and resurrected identities.

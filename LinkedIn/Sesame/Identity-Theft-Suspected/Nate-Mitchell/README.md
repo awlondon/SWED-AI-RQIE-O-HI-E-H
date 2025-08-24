@@ -6,3 +6,16 @@ For broader context within the Sesame cluster, see the [parent README](../README
 
 ## Related Institutions
 - [University of Southern California](../../../../institutions/usc/README.md)
+=======For project navigation, see the parent [LinkedIn README](../../../README.md).
+
+## Related Datasets
+- [`fake_profiles.csv`](../../../../datasets/fake_profiles.csv) – suspected synthetic or compromised LinkedIn profiles.
+
+## Related Case Studies
+- [Kevin Mallory](../../../../case-studies/kevin-mallory/README.md) – contacted via LinkedIn and convicted of espionage.
+- [Yanjun Xu](../../../../case-studies/yanjun-xu/README.md) – used talent recruitment programs for technology theft.
+
+## Related Institutions
+- [Sesame](../../../../institutions/sesame/README.md) – corporate background and linked personas.
+- [Zinn Labs](../../../../institutions/zinn-labs/README.md) – acquisition details and technology considerations.
+

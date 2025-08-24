@@ -1,6 +1,6 @@
 # Research Notes
 
-_Last updated: 2025-08-22_
+_Last updated: 2025-08-24_
 
 This directory collects planning notes and analytic guidance for investigating MSS-linked influence operations.
 
@@ -11,6 +11,8 @@ This directory collects planning notes and analytic guidance for investigating M
 - [Cyber Employment Report Summary](cyber_employment_report_summary.md)
 - [China's Human-Monitoring Manpower and Budget Analysis](china_human_monitoring_manpower_budget_analysis.md) – assesses labor and spending behind surveillance programs, raising questions about long-term sustainability and oversight.
 - [Grok Report: MSS Role in AI Development](../Grok_MSS_AI_Development_Report.md)
+- [LinkedIn](../LinkedIn/) – aggregates persona profiles and outreach artifacts to map infiltration tactics.
+- [Shell Companies](../shell-companies/) – catalogs front firms that enable covert financing and logistics.
 
 ## Current Objectives
 - Map tactics, targets, and technologies used against UK and allied networks.
