@@ -130,6 +130,25 @@ def test_append_partnership_empty_fields(
     csv_file = tmp_path / "mcf.csv"
     with pytest.raises(ValueError):
         append_partnership(csv_file, institution, partner, partnership_type, source)
+
+def test_append_record_missing_directory(tmp_path):
+    missing = tmp_path / "missing" / "data.csv"
+    with pytest.raises(FileNotFoundError):
+        append_record(missing, "P123", "finance", "osint")
+
+
+def test_append_record_config_override(tmp_path):
+    config = tmp_path / "config.yml"
+    config.write_text("allowed_sectors:\n  - defense\n")
+    csv_file = tmp_path / "data.csv"
+    append_record(csv_file, "P200", "defense", "osint", config)
+    with open(csv_file, newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+
+    assert rows == [
+        {"profile_id": "P200", "sector": "defense", "source": "osint"}
+    ]
+
     assert (
         "institution, partner, partnership_type and source must be non-empty"
         in caplog.text
