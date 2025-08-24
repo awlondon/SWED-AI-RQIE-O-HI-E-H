@@ -9,6 +9,7 @@ This directory collects planning notes and analytic guidance for investigating M
 - [Datasets](../datasets/)
 - [Case Studies](../case-studies/)
 - [Cyber Employment Report Summary](cyber_employment_report_summary.md)
+- [China's Human-Monitoring Manpower and Budget Analysis](china_human_monitoring_manpower_budget_analysis.md) – assesses labor and spending behind surveillance programs, raising questions about long-term sustainability and oversight.
 - [Grok Report: MSS Role in AI Development](../Grok_MSS_AI_Development_Report.md)
 
 ## Current Objectives
