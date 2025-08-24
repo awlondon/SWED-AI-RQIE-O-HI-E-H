@@ -53,9 +53,14 @@ def format_summary(results: List[Tuple[str, int, Counter]]) -> str:
     return "\n".join(lines).strip() + "\n"
 
 
-if __name__ == "__main__":
+def main() -> None:
+    """Command-line entry point for dataset analysis."""
     results = analyze_datasets()
     summary = format_summary(results)
     output_file = Path("datasets/analysis_summary.md")
     output_file.write_text(summary, encoding="utf-8")
     print(f"Wrote summary to {output_file}")
+
+
+if __name__ == "__main__":
+    main()

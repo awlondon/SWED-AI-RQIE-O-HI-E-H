@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mss-linkedin-infiltration"
+version = "0.1.0"
+description = "Open-source intelligence on MSS LinkedIn influence operations"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{name = "Contributors"}]
+dependencies = [
+    "pytest",
+]
+
+[project.scripts]
+analyze-datasets = "scripts.analyze_datasets:main"
+update-datasets = "scripts.update_datasets:main"

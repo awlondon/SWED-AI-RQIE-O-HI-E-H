@@ -109,7 +109,8 @@ def append_record(file_path: str, profile_id: str, sector: str, source: str) -> 
             "source": source,
         })
 
-if __name__ == "__main__":
+def main() -> None:
+    """Command-line interface for updating datasets."""
     parser = argparse.ArgumentParser(
         description="Append a record to a dataset CSV."
     )
@@ -152,3 +153,7 @@ if __name__ == "__main__":
         print(
             f"Appended partnership for {args.institution}-{args.partner} to {args.file_path}"
         )
+
+
+if __name__ == "__main__":
+    main()

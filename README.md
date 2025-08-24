@@ -28,6 +28,8 @@ The repository tracks open-source evidence of long-term influence operations att
 1. Install Python dependencies:
 
    ```bash
+   pip install -e .
+   # or
    pip install -r requirements.txt
    ```
 
