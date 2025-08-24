@@ -1,8 +1,17 @@
 #!/usr/bin/env python3
 """Append new records to dataset CSV files.
 
+The script supports two dataset schemas:
+
+* ``profile`` records used by files like ``fake_profiles.csv`` which have
+  ``profile_id``, ``sector`` and ``source`` columns.
+* ``partnership`` records used by ``mcf_institution_partnerships.csv`` which
+  contain ``institution``, ``partner``, ``partnership_type`` and ``source``
+  columns.
+
 Example:
-    python scripts/update_datasets.py datasets/fake_profiles.csv P123 finance open_source
+    python scripts/update_datasets.py profile datasets/fake_profiles.csv P123 finance open_source
+    python scripts/update_datasets.py partnership datasets/mcf_institution_partnerships.csv InstA Part1 research osint
 """
 
 import argparse
@@ -17,6 +26,47 @@ ALLOWED_SECTORS = {
     "energy",
     "healthcare",
 }
+
+
+def append_partnership(
+    file_path: str,
+    institution: str,
+    partner: str,
+    partnership_type: str,
+    source: str,
+) -> None:
+    """Append a partnership record to a dataset CSV file."""
+
+    if not all(
+        field.strip() for field in [institution, partner, partnership_type, source]
+    ):
+        raise ValueError("institution, partner, partnership_type and source must be non-empty")
+
+    file_path_obj = Path(file_path)
+    fieldnames = ["institution", "partner", "partnership_type", "source"]
+    existing = set()
+
+    if file_path_obj.exists() and file_path_obj.stat().st_size > 0:
+        with open(file_path, newline="", encoding="utf-8") as f:
+            reader = csv.DictReader(f)
+            existing = {(row["institution"], row["partner"]) for row in reader}
+    if (institution, partner) in existing:
+        raise ValueError(
+            f"partnership {institution}-{partner} already exists in {file_path}"
+        )
+
+    with open(file_path, "a", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        if not file_path_obj.exists() or file_path_obj.stat().st_size == 0:
+            writer.writeheader()
+        writer.writerow(
+            {
+                "institution": institution,
+                "partner": partner,
+                "partnership_type": partnership_type,
+                "source": source,
+            }
+        )
 
 def append_record(file_path: str, profile_id: str, sector: str, source: str) -> None:
     """Append a record to a dataset CSV file.
@@ -60,12 +110,45 @@ def append_record(file_path: str, profile_id: str, sector: str, source: str) -> 
         })
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Append a record to a dataset CSV.")
-    parser.add_argument("file_path", help="Path to dataset CSV to update")
-    parser.add_argument("profile_id", help="Unique profile identifier")
-    parser.add_argument("sector", help="Sector classification")
-    parser.add_argument("source", help="Source of the record")
+    parser = argparse.ArgumentParser(
+        description="Append a record to a dataset CSV."
+    )
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    profile_parser = subparsers.add_parser(
+        "profile", help="Append a profile record"
+    )
+    profile_parser.add_argument("file_path", help="Path to dataset CSV to update")
+    profile_parser.add_argument("profile_id", help="Unique profile identifier")
+    profile_parser.add_argument("sector", help="Sector classification")
+    profile_parser.add_argument("source", help="Source of the record")
+
+    partnership_parser = subparsers.add_parser(
+        "partnership", help="Append a partnership record"
+    )
+    partnership_parser.add_argument(
+        "file_path", help="Path to partnership dataset CSV to update"
+    )
+    partnership_parser.add_argument("institution", help="Name of the institution")
+    partnership_parser.add_argument("partner", help="Name of the partner entity")
+    partnership_parser.add_argument(
+        "partnership_type", help="Type of partnership (e.g. research)"
+    )
+    partnership_parser.add_argument("source", help="Source of the record")
+
     args = parser.parse_args()
 
-    append_record(args.file_path, args.profile_id, args.sector, args.source)
-    print(f"Appended record for {args.profile_id} to {args.file_path}")
+    if args.command == "profile":
+        append_record(args.file_path, args.profile_id, args.sector, args.source)
+        print(f"Appended record for {args.profile_id} to {args.file_path}")
+    else:
+        append_partnership(
+            args.file_path,
+            args.institution,
+            args.partner,
+            args.partnership_type,
+            args.source,
+        )
+        print(
+            f"Appended partnership for {args.institution}-{args.partner} to {args.file_path}"
+        )
