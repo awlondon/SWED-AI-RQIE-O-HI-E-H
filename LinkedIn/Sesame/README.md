@@ -12,3 +12,7 @@ See [LinkedIn Infiltration Research Plan](../../Intelligence-Analyst/LinkedIn_In
 - `export_controls_voice_cloning.md` – assessment of export restrictions, MSS-front speculation, and voice-cloning risks tied to Sesame and Zinn Labs.
 
 Current findings indicate no U.S. export ban on Zinn Labs' eye-tracking technology and no credible evidence that Sesame acts as an MSS front. However, open-source voice models could still be misused for impersonation or social engineering.
+
+## Related Institutions
+- [Sesame](../../institutions/sesame/README.md) – corporate background and linked personas.
+- [Zinn Labs](../../institutions/zinn-labs/README.md) – acquisition details and technology considerations.
