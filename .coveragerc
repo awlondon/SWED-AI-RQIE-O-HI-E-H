@@ -1,0 +1,8 @@
+[run]
+source = scripts
+timid = true
+branch = true
+
+[report]
+show_missing = true
+fail_under = 80
