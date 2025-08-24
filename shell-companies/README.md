@@ -2,6 +2,8 @@
 
 LinkedIn has identified and removed shell companies that sold large-scale automation and fake profile services. Two notable examples are **LIA** and **Vendisys**, both of which promoted subscription packages around $300 per month and relied on AI-generated personas to infiltrate professional networks.
 
+These shell-company offerings are part of the broader infiltration tradecraft documented in [MSS LinkedIn Infiltration Analysis](../MSS_LinkedIn_Infiltration_Analysis__CLAUDE.md). By supplying clusters of ready-made fake identities, they enable coordinated persona clusters like those cataloged in [LinkedIn](../LinkedIn/).
+
 ## LIA
 
 LIA marketed clusters of fake LinkedIn profiles complete with AI-generated avatars, job histories, and connection scripts. For roughly $300 a month, clients received dozens of ready-to-use identities and message templates. LinkedIn has since removed LIA's company page and associated accounts for violating platform policies.
