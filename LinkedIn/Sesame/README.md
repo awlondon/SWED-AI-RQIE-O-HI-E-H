@@ -7,3 +7,4 @@ This folder consolidates evidence on LinkedIn accounts linked to the company "Se
 - `Fabrication-Suspected/` – profiles believed to be AI-generated, with image-analysis artifacts.
 - `Identity-Theft-Suspected/` – personas (e.g., Brendan Iribe, Gordon Wetzstein, Nate Mitchell) that appear to reuse real individuals' images without consent.
 - `Zinn-Labs (acquisition)/` – open-source material on Sesame's reported acquisition of Zinn Labs.
+- `event-based-gaze-risk-report.md` – summary of event-based gaze tracking threats and mitigations.
