@@ -24,6 +24,7 @@ Use only sources that meet at least one of the following:
 - Verify the identity behind the persona "Chen-Lai."
 - Catalog additional persona clusters and associated infrastructure.
 - Assess long-term outreach patterns to high-value sectors.
+- Examine how worldwide cybersecurity talent gaps, noted in CSET's [Cyber Employment Report](https://cset.georgetown.edu/wp-content/uploads/t0231_cyber_employment_report_EN.pdf) and summarized [here](cyber_employment_report_summary.md), may open avenues for MSS influence operations.
 
 ## Internal Connector Use
 - Prefix proprietary queries with `internal://`.

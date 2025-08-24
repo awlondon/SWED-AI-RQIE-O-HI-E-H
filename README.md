@@ -27,6 +27,7 @@ The repository tracks open-source evidence of long-term influence operations att
 
 - Expand persona catalogues across sectors and languages.
 - Correlate LinkedIn activity with infrastructure such as shell companies or leaked credential sets.
+ - Evaluate how global cybersecurity workforce shortages could influence MSS targeting. See CSET's [Cyber Employment Report](https://cset.georgetown.edu/wp-content/uploads/t0231_cyber_employment_report_EN.pdf) and the local [summary](research/cyber_employment_report_summary.md).
 - Develop tooling for detecting AI-generated media and automated outreach.
 - Compare operations on other platforms to build cross-network intelligence.
 
