@@ -4,6 +4,12 @@ _Last updated: 2025-08-22_
 
 This directory collects planning notes and analytic guidance for investigating MSS-linked influence operations.
 
+## Related Resources
+
+- [Datasets](../datasets/)
+- [Case Studies](../case-studies/)
+- [Cyber Employment Report Summary](cyber_employment_report_summary.md)
+
 ## Current Objectives
 - Map tactics, targets, and technologies used against UK and allied networks.
 - Identify key actors, channels, and enabling infrastructure.
