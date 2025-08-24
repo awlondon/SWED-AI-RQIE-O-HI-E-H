@@ -2,6 +2,8 @@
 
 This document captures gaps in knowledge about the Chen Lai case and outlines areas for further research.
 
+For methodology, see [research methodology](../../research/README.md).
+
 ## Known Gaps
 - Precise timeline of Chen Lai's interactions with intelligence services.
 - Details on how Chen Lai was recruited or tasked.
