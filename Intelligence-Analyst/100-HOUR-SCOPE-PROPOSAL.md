@@ -1,8 +1,29 @@
 # 100-Hour Intelligence Analyst Research Schedule: Sesame Company Analysis
 
 **Research Target**: Sesame Company - AI-Generated Profiles and Chinese-English Translation Patterns Investigation  
-**Total Duration**: 100 Hours (4 weeks @ 25 hours per week)  
+**Total Duration**: 100 Hours (4 weeks @ 25 hours per week)
 **Classification**: UNCLASSIFIED//FOR OFFICIAL USE ONLY
+
+
+## Ranked "Do-First" Analysis Sequence
+1. **Network analysis & connection mapping (Hours 46–50)** – quickly surfaces coordination patterns and cluster anomalies; forms the backbone for other hypotheses.
+2. **Sesame content linguistic forensics (Hours 21–25)** – scans all English text for Chinese L1 transfer markers, yielding high signal on synthetic or translated operations.
+3. **AI-generated text detection (Hours 36–40)** – complements linguistic forensics with statistical and algorithmic indicators.
+4. **Image forensics & deepfake triage (Hours 41–45)** – triages GAN artifacts and reused seeds in profile photos to build evidentiary baselines.
+5. **Digital footprint & domain history (Hours 10–12)** – WHOIS, SSL, and timeline baselining provide early, objective anchors.
+6. **Corporate records & shell-company checks (Hours 7–9)** – links personas to legal entities and ownership graphs.
+7. **Cross-platform correlation (Hours 66–70)** – OPSEC slips emerge when messaging is mirrored across platforms.
+8. **Temporal & linguistic consistency (Hours 31–35)** – sudden proficiency jumps or style shifts suggest multi-author or assisted generation.
+9. **Technical infrastructure (Hours 56–60)** – IP, server, and certificate trails corroborate or refute MSS-linked infrastructure hypotheses.
+10. **Evidence correlation & validation (Hours 86–90)** – consolidates findings into a defensible chain of evidence and confidence levels.
+
+## Priority Stakeholder Deliverables
+- Executive summary & counterintelligence recommendations (Phase V) – high-value decision-maker guidance.
+- Comprehensive intelligence assessment (25–30 pp) – full narrative with sourcing.
+- Network analysis visualization – communicates clusters quickly to non-analysts.
+- Technical forensics report – images and infrastructure evidence annexes.
+- Linguistic analysis report – details L1 transfer and machine translation artifacts.
+- Lessons learned – captured continuously to inform future iterations.
 
 ---
 
